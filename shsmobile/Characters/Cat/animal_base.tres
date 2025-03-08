@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cia3n22wia1d5"]
+
+[resource]
+diffuse_mode = 2
+specular_mode = 2
