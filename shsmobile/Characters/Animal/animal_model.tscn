@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=4 uid="uid://bqwaahgemn838"]
 
-[ext_resource type="Material" uid="uid://cia3n22wia1d5" path="res://Characters/Animal/animal_base.tres" id="2_f56au"]
-[ext_resource type="Material" uid="uid://dmk1o2ao1kr66" path="res://Characters/Animal/animal_secondary.tres" id="3_du2ll"]
-[ext_resource type="Material" uid="uid://lcbq3bg6sins" path="res://Characters/Animal/animal_face.tres" id="4_e8oo4"]
-[ext_resource type="ArrayMesh" uid="uid://d4a088ugfhrkd" path="res://Characters/Animal/cat_ears.obj" id="5_6onbj"]
-[ext_resource type="ArrayMesh" uid="uid://60uxqnms6ftu" path="res://Characters/Animal/dog_ears.obj" id="6_xsgsq"]
+[ext_resource type="Material" uid="uid://cia3n22wia1d5" path="res://Characters/Animal/Textures/animal_base.tres" id="1_e8cp7"]
+[ext_resource type="Material" uid="uid://dmk1o2ao1kr66" path="res://Characters/Animal/Textures/animal_secondary.tres" id="2_j1bue"]
+[ext_resource type="Material" uid="uid://lcbq3bg6sins" path="res://Characters/Animal/Textures/animal_face.tres" id="3_gbefl"]
+[ext_resource type="ArrayMesh" uid="uid://d4a088ugfhrkd" path="res://Characters/Animal/cat_ears.obj" id="4_6khjs"]
+[ext_resource type="ArrayMesh" uid="uid://60uxqnms6ftu" path="res://Characters/Animal/dog_ears.obj" id="5_1ijs6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nexr"]
 vertex_color_use_as_albedo = true
@@ -91,18 +91,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_l2khd")
 
-[node name="Animal" type="CharacterBody3D"]
+[node name="AnimalModel" type="Node3D"]
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_c0yvg")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("2_f56au")
-surface_material_override/1 = ExtResource("3_du2ll")
-surface_material_override/2 = ExtResource("4_e8oo4")
+surface_material_override/0 = ExtResource("1_e8cp7")
+surface_material_override/1 = ExtResource("2_j1bue")
+surface_material_override/2 = ExtResource("3_gbefl")
 
 [node name="CatEars" type="MeshInstance3D" parent="."]
-mesh = ExtResource("5_6onbj")
+mesh = ExtResource("4_6khjs")
 
 [node name="DogEars" type="MeshInstance3D" parent="."]
 visible = false
-mesh = ExtResource("6_xsgsq")
+mesh = ExtResource("5_1ijs6")
