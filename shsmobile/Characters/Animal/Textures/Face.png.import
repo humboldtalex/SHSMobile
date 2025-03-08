@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bta0b0k0cvs50"
-path.s3tc="res://.godot/imported/Face.png-6f6c13ccd8ed4bfc65b474bed41529fe.s3tc.ctex"
+path.s3tc="res://.godot/imported/Face.png-e6e37bf38b4ba8d0d5c6a93d10b4cc9f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Characters/Cat/Textures/Face.png"
-dest_files=["res://.godot/imported/Face.png-6f6c13ccd8ed4bfc65b474bed41529fe.s3tc.ctex"]
+source_file="res://Characters/Animal/Textures/Face.png"
+dest_files=["res://.godot/imported/Face.png-e6e37bf38b4ba8d0d5c6a93d10b4cc9f.s3tc.ctex"]
 
 [params]
 
