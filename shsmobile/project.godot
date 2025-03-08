@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="SHSMobile"
+run/main_scene="uid://cuq01oegh3gne"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=360
+window/size/viewport_height=800
 
 [rendering]
 

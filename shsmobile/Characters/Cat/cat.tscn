@@ -1,5 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqwaahgemn838"]
+[gd_scene load_steps=3 format=3 uid="uid://bqwaahgemn838"]
 
 [ext_resource type="PackedScene" uid="uid://0kas77t6cicj" path="res://Characters/Cat/cat.glb" id="1_0w75p"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0w75p"]
+
 [node name="cat" instance=ExtResource("1_0w75p")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(0.604488, 0.796614, 0, -0.796614, 0.604488, 0, 0, 0, 1, -0.0451815, 1.25378, 0)
+mesh = SubResource("CapsuleMesh_0w75p")
