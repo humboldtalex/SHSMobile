@@ -16,4 +16,4 @@ func _on_target_target_entered() -> void: #Func executes when fish is caught
 
 func _on_target_target_exited() -> void:	#Func exectes when fish game resets
 	
-	print("RELEASE/RESET")
+	pass
