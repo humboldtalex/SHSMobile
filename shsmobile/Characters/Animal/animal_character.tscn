@@ -38,8 +38,8 @@ script = ExtResource("1_cw0ks")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_cw0ks")
-position = Vector2(7.62939e-06, 202)
-scale = Vector2(7.07031, 2.33594)
+position = Vector2(0, 196.596)
+scale = Vector2(5.62891, 1.85972)
 texture = SubResource("GradientTexture2D_xrx2v")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]

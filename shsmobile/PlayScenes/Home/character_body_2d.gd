@@ -8,7 +8,7 @@ var click_position = Vector2()
 var target_position = Vector2()
 
 func _physics_process(delta):
-	if Input.is_action_just_pressed("tap"):
+	if Input.is_action_just_pressed("click"):
 		click_position = get_global_mouse_position()
 		print(click_position)
 		
