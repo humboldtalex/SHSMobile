@@ -4,8 +4,8 @@
 [ext_resource type="Shader" uid="uid://cs8mecm5t8lsy" path="res://Menus/MainMenu/scrolling_background.gdshader" id="2_y4ryc"]
 [ext_resource type="Texture2D" uid="uid://d4bvs7v8wlhyb" path="res://Menus/scrolling_pattern.png" id="3_7f67a"]
 [ext_resource type="FontFile" uid="uid://by7a8b53sxlvx" path="res://Textures/supermario85/SuperMario85.ttf" id="4_lkur8"]
+[ext_resource type="FontFile" uid="uid://cki15b6pc4s1m" path="res://Menus/Options/supermario85/SuperMario85.ttf" id="4_o0cfa"]
 [ext_resource type="PackedScene" uid="uid://bv73byg25sqmo" path="res://Transition/transition_screen.tscn" id="4_y4ryc"]
-[ext_resource type="Texture2D" uid="uid://bq3p6equii8fo" path="res://Textures/Classic95/Styles/CheckBox/Checked.png" id="5_o0cfa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lkur8"]
 shader = ExtResource("2_y4ryc")
@@ -44,7 +44,7 @@ anchor_bottom = 0.5
 offset_left = -520.0
 offset_top = -201.0
 offset_right = 520.0
-offset_bottom = 201.0
+offset_bottom = 301.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -61,7 +61,6 @@ text = "SHS Mobile Game"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_lkur8")
 theme_override_font_sizes/font_size = 75
-theme_override_icons/icon = ExtResource("5_o0cfa")
 text = "Start Game"
 
 [node name="OptionsButton" type="Button" parent="PanelContainer/VBoxContainer"]
@@ -76,8 +75,13 @@ theme_override_fonts/font = ExtResource("4_lkur8")
 theme_override_font_sizes/font_size = 75
 text = "Credits"
 
-[node name="BackButton" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="LinkButton" type="LinkButton" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_o0cfa")
+theme_override_font_sizes/font_size = 75
+text = "                 Donate"
+underline = 2
+uri = "https://www.sequoiahumane.org/donateSHS.htm"
 
 [node name="Transition Screen" parent="." instance=ExtResource("4_y4ryc")]
 visible = false
