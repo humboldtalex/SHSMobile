@@ -9,6 +9,10 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lm2d7"]
 texture = ExtResource("1_grr4j")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vmvi5"]
 texture = ExtResource("2_sarpg")
@@ -30,7 +34,7 @@ corner_radius_top_right = 5
 process_mode = 3
 
 [node name="FishingGame" type="Control" parent="."]
-custom_minimum_size = Vector2(340, 800)
+custom_minimum_size = Vector2(1000, 2320)
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -43,6 +47,7 @@ offset_right = 150.0
 offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
 script = ExtResource("1_w2e65")
 
 [node name="PanelContainer" type="PanelContainer" parent="FishingGame"]
@@ -83,10 +88,12 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_0puc6")
 
 [node name="Fish" parent="FishingGame" node_paths=PackedStringArray("aquaContainer") instance=ExtResource("4_1qkt0")]
 position = Vector2(154, 161)
+scale = Vector2(4, 4)
 aquaContainer = NodePath("../PanelContainer/MarginContainer/VBoxContainer/AquaContainer")
 
 [node name="Target" parent="FishingGame" instance=ExtResource("6_vxgsl")]
-position = Vector2(156.467, 163.88)
+position = Vector2(487, 2231)
+scale = Vector2(2, 2)
 
 [connection signal="target_entered" from="FishingGame/Target" to="FishingGame" method="_on_target_target_entered"]
 [connection signal="target_exited" from="FishingGame/Target" to="FishingGame" method="_on_target_target_exited"]

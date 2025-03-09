@@ -44,6 +44,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_target() -> void:
 	set_physics_process(false)
+	print("ON TARGET")
 	await get_tree().create_timer(1.5).timeout
 	
 	_set_new_target_position()
