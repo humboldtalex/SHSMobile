@@ -1,4 +1,3 @@
-class_name Upgradeable
 extends Area2D
 
 var stage : int = 4
