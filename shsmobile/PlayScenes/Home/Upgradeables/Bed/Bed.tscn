@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=3 uid="uid://gk0njf3pbxmr"]
+
+[ext_resource type="Script" uid="uid://dm8jpaubents3" path="res://PlayScenes/Home/Upgradeables/Bed/bed_area.gd" id="1_vjdbe"]
+[ext_resource type="Texture2D" uid="uid://bogjdfn2xc6kq" path="res://PlayScenes/Home/Upgradeables/Bed/0.png" id="2_gdqfx"]
+[ext_resource type="Texture2D" uid="uid://d1mtw5ogcg7ul" path="res://PlayScenes/Home/Upgradeables/FoodBowl/0.png" id="2_kcd2t"]
+[ext_resource type="Texture2D" uid="uid://bxbrkjipboowr" path="res://PlayScenes/Home/Upgradeables/Bed/1.png" id="3_edum0"]
+[ext_resource type="Texture2D" uid="uid://cj13yvc83jmsb" path="res://PlayScenes/Home/Upgradeables/Bed/2.png" id="4_26wj4"]
+[ext_resource type="Texture2D" uid="uid://dx2vej32l7ys8" path="res://PlayScenes/Home/Upgradeables/Bed/3.png" id="5_kvjss"]
+[ext_resource type="Texture2D" uid="uid://dg65gnv6rl83l" path="res://PlayScenes/Home/Upgradeables/Bed/4.png" id="6_n3bjy"]
+[ext_resource type="Script" uid="uid://bm646lolchc85" path="res://PlayScenes/Home/Upgradeables/Bed/bed_control.gd" id="7_kcd2t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dtd4b"]
+radius = 116.349
+
+[node name="Bed" type="Area2D"]
+script = ExtResource("1_vjdbe")
+sprite_array = Array[Texture2D]([ExtResource("2_gdqfx"), ExtResource("3_edum0"), ExtResource("4_26wj4"), ExtResource("5_kvjss"), ExtResource("6_n3bjy")])
+
+[node name="BedSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_kcd2t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dtd4b")
+one_way_collision_margin = 0.0
+
+[node name="Control" type="Control" parent="."]
+top_level = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_kcd2t")
+object_name = "Food Bowl"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CancelButton" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+text = "Cancel"
+
+[node name="PayButton" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Would you like to purchase this upgrade? 
+"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
