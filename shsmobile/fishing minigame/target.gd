@@ -36,7 +36,7 @@ func _process(delta):
 				speed = direction.length() / time
 				direction = direction.normalized()
 				time = 0
-				sprite_2d.rotation = direction.angle()
+				sprite_2d.rotation = direction.angle() 
 				fish_line.visible = true
 	time = time + delta
 	if speed > 0:
@@ -48,10 +48,10 @@ func _process(delta):
 			speed = 0
 		if time > 0.025:
 			time = 0
-			var r = speed / 125
+			var r = speed / 150
 			random_vector = Vector2(randf_range(-r,r),200)
 			fish_line.add_point(START_POS - fish_line.global_position + random_vector)
-			sprite_2d.scale -= Vector2(.005,.005)
+			sprite_2d.scale -= Vector2(.02,.02)
 		#print(speed)
 		if speed < 50:		#Speed cutoff, below this point, target 'hits the water'
 			speed = 0
@@ -77,44 +77,36 @@ func _check_on_fish() -> void:
 		sprite_2d.scale = Vector2(.75,.75)
 		#sprite_2d.position -= Vector2(50,0)
 		target_exited.emit()
-		print("RELEASE")
 		sprite_2d.texture = load("res://fishing minigame/assets/bobber.png")
+		label1.visible = false
+		label2.visible=false
+		sprite_2d.rotation = 0
 	elif not get_overlapping_bodies().is_empty() and respawn: 
 		var fish_selector : int = randf_range(0,100)
 		
 		var index : int = 0
 		if fish_selector<8 :
-			
-			#print("Chinook Salmon")
+
 			index = 0
 		elif fish_selector<18 :
-			print("Coastrange Sculpin")
 			index = 1
 		elif fish_selector<23 :
-			print("Coho Salmon")
 			index =2
 		elif fish_selector<27 :
-			print("Green Sturgeon")
 			index =3
 		elif fish_selector<44 :
-			print("Pacific Staghorn Sculpin")
 			index =4
 		elif fish_selector<52 :
-			print("Sacramento Sculpin")
 			index =5
 		elif fish_selector<65:
-			print("Shiner Perch")
 			index =6
 		elif fish_selector<71:
-			print("Steelhead Trout")
 			index =7
 		elif fish_selector<97:
-			print("Three Spined Sickle")
 			index =8
 		elif fish_selector<100:
-			print("Tidewater Goby")
 			index =9
-		delay = 4
+		delay = 3
 		
 		#sprite_2d.texture = load("res://fishing minigame/assets/crosshair026.png")
 		sprite_2d.texture = fish_array[index].fish_sprite
@@ -122,9 +114,11 @@ func _check_on_fish() -> void:
 		label2.text = str(fish_array[index].fish_price)
 		label2.text+=" Tokens!"
 		Global.tokens += fish_array[index].fish_price
+		label1.visible = true
+		label2.visible=true
 		sprite_2d.scale = Vector2(1,1)
 		sprite_2d.position = Vector2.ZERO
 		sprite_2d.offset = Vector2(0,100)
-		sprite_2d.rotation = 0
+		
 		target_entered.emit()
 		
