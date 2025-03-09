@@ -9,13 +9,11 @@ func _ready():
 	MenuThemeStream.stop()
 	HomeThemeStream.stop()
 	FishingThemeStream.play()
+	label.text = str(Global.tokens) + " tokens"
 	
 func _on_target_target_entered() -> void: #Func executes when fish is caught
 	fish.visible = false
-	
-func _process(delta):
-	label.text = str(Global.tokens) + " tokens"
-
 func _on_target_target_exited() -> void:	#Func exectes when fish game resets
 	fish.visible = true
+	label.text = str(Global.tokens) + " tokens"
 	

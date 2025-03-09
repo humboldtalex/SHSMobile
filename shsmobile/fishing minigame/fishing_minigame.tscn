@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://fd0acs6wx1qw" path="res://fishing minigame/assets/Box_Orange_Square.png" id="1_grr4j"]
 [ext_resource type="Script" uid="uid://cayk0ijutmy6n" path="res://fishing minigame/fishing_game.gd" id="1_w2e65"]
-[ext_resource type="Shader" uid="uid://cs8mecm5t8lsy" path="res://Menus/MainMenu/scrolling_background.gdshader" id="3_jauar"]
+[ext_resource type="Shader" path="res://Menus/MainMenu/scrolling_background.gdshader" id="3_jauar"]
 [ext_resource type="PackedScene" uid="uid://bhcw6o61k200w" path="res://fishing minigame/fish.tscn" id="4_1qkt0"]
 [ext_resource type="Texture2D" uid="uid://8c71qj23rra5" path="res://fishing minigame/assets/waterbackground.png" id="4_xjigb"]
 [ext_resource type="PackedScene" uid="uid://dh42nrgwqm0yk" path="res://Menus/Options/homebutton.tscn" id="5_m7ou7"]
