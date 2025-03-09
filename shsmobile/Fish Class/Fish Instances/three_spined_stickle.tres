@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="Fish" load_steps=2 format=3 uid="uid://dkaxb1wyqmmgy"]
+[gd_resource type="Resource" script_class="Fish" load_steps=3 format=3 uid="uid://dkaxb1wyqmmgy"]
 
 [ext_resource type="Script" uid="uid://dq37t3tfea1ae" path="res://Fish Class/fish_resource.gd" id="1_6nbm1"]
+[ext_resource type="Texture2D" uid="uid://crpmrvvkw8xdw" path="res://Fish Class/FishTextures/three_spined_stickle.png" id="1_fqac6"]
 
 [resource]
 script = ExtResource("1_6nbm1")
 fish_species = "Three Spined Stickle"
-fish_price = 0
+fish_price = 1
+fish_sprite = ExtResource("1_fqac6")
 fish_rarity = 0.26
 metadata/_custom_type_script = "uid://dq37t3tfea1ae"

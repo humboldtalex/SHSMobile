@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="Fish" load_steps=2 format=3 uid="uid://knjyfpjyuboi"]
+[gd_resource type="Resource" script_class="Fish" load_steps=3 format=3 uid="uid://knjyfpjyuboi"]
 
 [ext_resource type="Script" uid="uid://dq37t3tfea1ae" path="res://Fish Class/fish_resource.gd" id="1_27bim"]
+[ext_resource type="Texture2D" uid="uid://h312ubvlfv7x" path="res://Fish Class/FishTextures/pacific_staghorn_sculpin.png" id="1_dob6b"]
 
 [resource]
 script = ExtResource("1_27bim")
 fish_species = "Pacific Staghorn Sculpin"
-fish_price = 0
+fish_price = 2
+fish_sprite = ExtResource("1_dob6b")
 fish_rarity = 0.17
 metadata/_custom_type_script = "uid://dq37t3tfea1ae"
