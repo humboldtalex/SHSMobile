@@ -54,7 +54,6 @@ func _process(delta):
 			speed = 0
 			respawn = true
 			_check_on_fish()
-			sprite_2d.visible=false
 	if respawn == true:		#countdown before respawning target
 		delay -= delta
 		
@@ -65,7 +64,6 @@ func _process(delta):
 			fish_line.visible = false
 			global_position = START_POS
 			sprite_2d.scale = Vector2(.25,.25)
-			sprite_2d.visible=true
 			_check_on_fish()
 
 			for i in line_len-2:
@@ -73,6 +71,42 @@ func _process(delta):
 	
 func _check_on_fish() -> void:
 	if not respawn: 
+		sprite_2d.scale = Vector2(.25,.25)
 		target_exited.emit()
 	elif not get_overlapping_bodies().is_empty() and respawn: 
+		var fish_selector : int = randf_range(0,171)
+		var index : int = 0
+		if fish_selector<8 :
+			print("Chinook Salmon")
+			index = 0
+		elif fish_selector<18 :
+			print("Coastrange Sculpin")
+			index = 1
+		elif fish_selector<23 :
+			print("Coho Salmon")
+			index =2
+		elif fish_selector<27 :
+			print("Green Sturgeon")
+			index =3
+		elif fish_selector<44 :
+			print("Pacific Staghorn Sculpin")
+			index =4
+		elif fish_selector<52 :
+			print("Sacramento Sculpin")
+			index =5
+		elif fish_selector<65:
+			print("Shiner Perch")
+			index =6
+		elif fish_selector<71:
+			print("Steelhead Trout")
+			index =7
+		elif fish_selector<97:
+			print("Three Spined Sickle")
+			index =8
+		elif fish_selector<100:
+			print("Tidewater Goby")
+			index =9
+		sprite_2d.texture = load("res://fishing minigame/assets/crosshair026.png")
+		sprite_2d.scale = Vector2(1,1)
 		target_entered.emit()
+		

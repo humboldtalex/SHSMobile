@@ -1,10 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://y6loya14qh2u"]
+[gd_scene load_steps=18 format=3 uid="uid://y6loya14qh2u"]
 
 [ext_resource type="Texture2D" uid="uid://fd0acs6wx1qw" path="res://fishing minigame/assets/Box_Orange_Square.png" id="1_grr4j"]
 [ext_resource type="Script" uid="uid://cayk0ijutmy6n" path="res://fishing minigame/fishing_game.gd" id="1_w2e65"]
+[ext_resource type="Script" uid="uid://dq37t3tfea1ae" path="res://Fish Class/fish_resource.gd" id="2_m7ou7"]
+[ext_resource type="Resource" uid="uid://dkaxb1wyqmmgy" path="res://Fish Class/Fish Instances/three_spined_stickle.tres" id="3_8fk87"]
+[ext_resource type="Resource" uid="uid://c2vtc5oxcojjt" path="res://Fish Class/Fish Instances/chinook_salmon.tres" id="3_a6qdd"]
 [ext_resource type="PackedScene" uid="uid://bhcw6o61k200w" path="res://fishing minigame/fish.tscn" id="4_1qkt0"]
-[ext_resource type="PackedScene" path="res://Menus/homebutton.tscn" id="5_s3bxt"]
+[ext_resource type="Resource" uid="uid://c7hk47xpb0u2o" path="res://Fish Class/Fish Instances/coastrange_sculpin.tres" id="4_rpnbw"]
+[ext_resource type="Resource" uid="uid://bou4u4r62rrhx" path="res://Fish Class/Fish Instances/coho_salmon.tres" id="5_fuwhs"]
+[ext_resource type="Resource" uid="uid://ks705vu0m8q0" path="res://Fish Class/Fish Instances/green_sturgeon.tres" id="6_ikqah"]
 [ext_resource type="PackedScene" uid="uid://d3t8ptgatajj7" path="res://fishing minigame/target.tscn" id="6_vxgsl"]
+[ext_resource type="Resource" uid="uid://knjyfpjyuboi" path="res://Fish Class/Fish Instances/pacific_staghorn_sculpin.tres" id="7_1d3u7"]
+[ext_resource type="Resource" uid="uid://wt3nn2scuj1q" path="res://Fish Class/Fish Instances/sacramento_sculpin.tres" id="8_xtnch"]
+[ext_resource type="Resource" uid="uid://beih72miqaytg" path="res://Fish Class/Fish Instances/shiner_perch.tres" id="9_a7k4v"]
+[ext_resource type="Resource" uid="uid://bxwboo02qkrns" path="res://Fish Class/Fish Instances/steelhead_trout.tres" id="10_cnkq8"]
+[ext_resource type="Resource" uid="uid://wis2bhtn8jen" path="res://Fish Class/Fish Instances/tidewater_goby.tres" id="12_fhyk6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lm2d7"]
 texture = ExtResource("1_grr4j")
@@ -42,6 +52,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 script = ExtResource("1_w2e65")
+fish_array = Array[ExtResource("2_m7ou7")]([ExtResource("3_a6qdd"), ExtResource("4_rpnbw"), ExtResource("5_fuwhs"), ExtResource("6_ikqah"), ExtResource("7_1d3u7"), ExtResource("8_xtnch"), ExtResource("9_a7k4v"), ExtResource("10_cnkq8"), ExtResource("3_8fk87"), ExtResource("12_fhyk6")])
 
 [node name="PanelContainer" type="PanelContainer" parent="FishingGame"]
 layout_mode = 1
@@ -78,12 +89,6 @@ aquaContainer = NodePath("../PanelContainer/MarginContainer/VBoxContainer/AquaCo
 [node name="Target" parent="FishingGame" instance=ExtResource("6_vxgsl")]
 position = Vector2(540, 2200)
 scale = Vector2(2, 2)
-
-[node name="Control" parent="FishingGame" instance=ExtResource("5_s3bxt")]
-layout_mode = 1
-anchors_preset = 15
-offset_top = 0.0
-offset_bottom = 0.0
 
 [connection signal="target_entered" from="FishingGame/Target" to="FishingGame" method="_on_target_target_entered"]
 [connection signal="target_exited" from="FishingGame/Target" to="FishingGame" method="_on_target_target_exited"]
