@@ -6,9 +6,14 @@ extends Control
 
 func _ready():
 	credits_button.connect("pressed", on_credits_pressed)
+	options_button.connect("pressed", on_options_pressed)
 
 func _process(delta):
 	pass
 
 func on_credits_pressed():
 	get_tree().change_scene_to_file("res://Menus/Credits/credits.tscn")
+	
+func on_options_pressed():
+	get_tree().change_scene_to_file("res://Menus/Options/options.tscn")
+	
