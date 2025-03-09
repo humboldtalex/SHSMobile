@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcjbo4ax8jbjf"]
-
-[ext_resource type="Script" uid="uid://biv5a0mlp6l8v" path="res://Saver-Loader/saver_loader.gd" id="1_jb11h"]
-
-[node name="SaverLoader" type="Node"]
-script = ExtResource("1_jb11h")

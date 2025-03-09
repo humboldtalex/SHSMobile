@@ -6,5 +6,5 @@
 script = ExtResource("1_l5fr2")
 fish_species = "Green Sturgeon"
 fish_price = 0
-fish_rarity = 9.0
+fish_rarity = 0.04
 metadata/_custom_type_script = "uid://dq37t3tfea1ae"

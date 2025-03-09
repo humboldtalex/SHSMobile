@@ -6,5 +6,5 @@
 script = ExtResource("1_72w62")
 fish_species = "Coastrange Sculpin"
 fish_price = 0
-fish_rarity = 4.0
+fish_rarity = 0.1
 metadata/_custom_type_script = "uid://dq37t3tfea1ae"

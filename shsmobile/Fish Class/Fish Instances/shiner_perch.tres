@@ -6,5 +6,5 @@
 script = ExtResource("1_k3a02")
 fish_species = "Shiner Perch"
 fish_price = 0
-fish_rarity = 3.0
+fish_rarity = 0.13
 metadata/_custom_type_script = "uid://dq37t3tfea1ae"
