@@ -39,14 +39,13 @@ func _process(delta):
 		global_position += direction * speed * delta / 2 	#Moves target
 		speed -= 7000 * delta								#Target decceleration
 		if global_position.x < 0 or global_position.x > 1080 or global_position.y < 0 or global_position.y > 2400:
-			print("OUT OF BOUNDS")
 			respawn = true
-			delay = 0
-			speed = 49
+			delay = 0.5
+			speed = 0
 		if time > 0.025:
 			time = 0
 			var r = speed / 125
-			random_vector = Vector2(randf_range(-r,r),randf_range(-r,r))
+			random_vector = Vector2(randf_range(-r,r),0)
 			fish_line.add_point(START_POS - fish_line.global_position + random_vector)
 			sprite_2d.scale -= Vector2(.005,.005)
 		#print(speed)
@@ -54,7 +53,6 @@ func _process(delta):
 			speed = 0
 			respawn = true
 			_check_on_fish()
-			sprite_2d.visible=false
 	if respawn == true:		#countdown before respawning target
 		delay -= delta
 		
@@ -65,7 +63,6 @@ func _process(delta):
 			fish_line.visible = false
 			global_position = START_POS
 			sprite_2d.scale = Vector2(.25,.25)
-			sprite_2d.visible=true
 			_check_on_fish()
 
 			for i in line_len-2:
@@ -73,6 +70,46 @@ func _process(delta):
 	
 func _check_on_fish() -> void:
 	if not respawn: 
+		sprite_2d.scale = Vector2(.25,.25)
+		sprite_2d.position += Vector2(50,0)
 		target_exited.emit()
+		sprite_2d.texture = load("res://fishing minigame/assets/bobber.png")
 	elif not get_overlapping_bodies().is_empty() and respawn: 
+		var fish_selector : int = randf_range(0,100)
+		var index : int = 0
+		if fish_selector<8 :
+			print("Chinook Salmon")
+			index = 0
+		elif fish_selector<18 :
+			print("Coastrange Sculpin")
+			index = 1
+		elif fish_selector<23 :
+			print("Coho Salmon")
+			index =2
+		elif fish_selector<27 :
+			print("Green Sturgeon")
+			index =3
+		elif fish_selector<44 :
+			print("Pacific Staghorn Sculpin")
+			index =4
+		elif fish_selector<52 :
+			print("Sacramento Sculpin")
+			index =5
+		elif fish_selector<65:
+			print("Shiner Perch")
+			index =6
+		elif fish_selector<71:
+			print("Steelhead Trout")
+			index =7
+		elif fish_selector<97:
+			print("Three Spined Sickle")
+			index =8
+		elif fish_selector<100:
+			print("Tidewater Goby")
+			index =9
+		delay = 4
+		sprite_2d.texture = load("res://fishing minigame/assets/crosshair026.png")
+		sprite_2d.scale = Vector2(1,1)
+		sprite_2d.position -= Vector2(50,0)
 		target_entered.emit()
+		
