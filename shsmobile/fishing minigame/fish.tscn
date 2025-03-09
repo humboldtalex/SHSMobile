@@ -1,7 +1,7 @@
 [gd_scene load_steps=37 format=3 uid="uid://bhcw6o61k200w"]
 
 [ext_resource type="Script" uid="uid://datt2usf4ehke" path="res://fishing minigame/fish.gd" id="1_y3k36"]
-[ext_resource type="Texture2D" uid="uid://mtqatvsxkfwq" path="res://fishing minigame/assets/bubbles.png" id="2_cfuqh"]
+[ext_resource type="Texture2D" uid="uid://bmdi3a534vxyg" path="res://fishing minigame/assets/bubbles.png" id="2_cfuqh"]
 [ext_resource type="Texture2D" uid="uid://druesetcvfyyx" path="res://fishing minigame/assets/Orange.png" id="2_wh5rm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xnpc0"]

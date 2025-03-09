@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://bou4u4r62rrhx" path="res://Fish Class/Fish Instances/coho_salmon.tres" id="5_m8b1h"]
 [ext_resource type="Resource" uid="uid://ks705vu0m8q0" path="res://Fish Class/Fish Instances/green_sturgeon.tres" id="6_jf6pv"]
 [ext_resource type="Resource" uid="uid://knjyfpjyuboi" path="res://Fish Class/Fish Instances/pacific_staghorn_sculpin.tres" id="7_qxp62"]
-[ext_resource type="Resource" uid="uid://wt3nn2scuj1q" path="res://Fish Class/Fish Instances/sacramento_sculpin.tres" id="8_q4xkf"]
+[ext_resource type="Resource" uid="uid://wt3nn2scuj1q" path="res://Fish Class/Fish Instances/sacramento_sucker.tres" id="8_voi6t"]
 [ext_resource type="Resource" uid="uid://beih72miqaytg" path="res://Fish Class/Fish Instances/shiner_perch.tres" id="9_pwu0n"]
 [ext_resource type="Resource" uid="uid://bxwboo02qkrns" path="res://Fish Class/Fish Instances/steelhead_trout.tres" id="10_xlpxl"]
 [ext_resource type="Resource" uid="uid://dkaxb1wyqmmgy" path="res://Fish Class/Fish Instances/three_spined_stickle.tres" id="11_v23t6"]
@@ -22,10 +22,12 @@ _data = [Vector2(0, 0.403737), 0.0, 1.67949, 0, 0, Vector2(0.458333, 0.723731), 
 point_count = 3
 
 [node name="Target" type="Area2D"]
+position = Vector2(540, 2300)
 script = ExtResource("1_tturu")
-fish_array = Array[ExtResource("2_voi6t")]([ExtResource("3_yo7n1"), ExtResource("4_83nf1"), ExtResource("5_m8b1h"), ExtResource("6_jf6pv"), ExtResource("7_qxp62"), ExtResource("8_q4xkf"), ExtResource("9_pwu0n"), ExtResource("10_xlpxl"), ExtResource("11_v23t6"), ExtResource("12_70sp5")])
+fish_array = Array[ExtResource("2_voi6t")]([ExtResource("3_yo7n1"), ExtResource("4_83nf1"), ExtResource("5_m8b1h"), ExtResource("6_jf6pv"), ExtResource("7_qxp62"), ExtResource("8_voi6t"), ExtResource("9_pwu0n"), ExtResource("10_xlpxl"), ExtResource("11_v23t6"), ExtResource("12_70sp5")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 4
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_gfqbv")
 offset = Vector2(0, 100)
@@ -36,7 +38,8 @@ shape = SubResource("CircleShape2D_gfqbv")
 
 [node name="FishLine" type="Line2D" parent="."]
 visible = false
-points = PackedVector2Array(0, 0, -25, 50)
+z_index = 2
+points = PackedVector2Array(0, 0, -75, 100)
 width = 4.0
 width_curve = SubResource("Curve_gfqbv")
 default_color = Color(0, 0, 0, 1)
@@ -45,3 +48,30 @@ begin_cap_mode = 2
 end_cap_mode = 2
 round_precision = 1
 antialiased = true
+
+[node name="Label1" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = 300.0
+offset_right = 200.0
+offset_bottom = 323.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = 350.0
+offset_right = 200.0
+offset_bottom = 373.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1

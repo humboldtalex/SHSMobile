@@ -2,6 +2,9 @@ extends Area2D
 @onready var fish_line: Line2D = $FishLine
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @export var fish_array:Array[Fish]
+@onready var label1: Label = $Label1
+@onready var label2: Label = $Label2
+
 signal target_entered()
 signal target_exited()
 
@@ -46,7 +49,7 @@ func _process(delta):
 		if time > 0.025:
 			time = 0
 			var r = speed / 125
-			random_vector = Vector2(randf_range(-r,r),0)
+			random_vector = Vector2(randf_range(-r,r),200)
 			fish_line.add_point(START_POS - fish_line.global_position + random_vector)
 			sprite_2d.scale -= Vector2(.005,.005)
 		#print(speed)
@@ -72,14 +75,17 @@ func _process(delta):
 func _check_on_fish() -> void:
 	if not respawn: 
 		sprite_2d.scale = Vector2(.25,.25)
-		sprite_2d.position -= Vector2(50,0)
+		#sprite_2d.position -= Vector2(50,0)
 		target_exited.emit()
+		print("RELEASE")
 		sprite_2d.texture = load("res://fishing minigame/assets/bobber.png")
 	elif not get_overlapping_bodies().is_empty() and respawn: 
 		var fish_selector : int = randf_range(0,100)
+		
 		var index : int = 0
 		if fish_selector<8 :
-			print("Chinook Salmon")
+			
+			#print("Chinook Salmon")
 			index = 0
 		elif fish_selector<18 :
 			print("Coastrange Sculpin")
@@ -110,8 +116,15 @@ func _check_on_fish() -> void:
 			index =9
 		delay = 4
 		
-		sprite_2d.texture = load("res://fishing minigame/assets/crosshair026.png")
+		#sprite_2d.texture = load("res://fishing minigame/assets/crosshair026.png")
+		sprite_2d.texture = fish_array[index].fish_sprite
+		label1.text = fish_array[index].fish_species
+		label2.text = str(fish_array[index].fish_price)
+		label2.text+=" Tokens!"
+		Global.tokens += fish_array[index].fish_price
 		sprite_2d.scale = Vector2(1,1)
 		sprite_2d.position = Vector2.ZERO
+		sprite_2d.offset = Vector2(0,100)
+		sprite_2d.rotation = 0
 		target_entered.emit()
 		
