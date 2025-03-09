@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Fish" load_steps=2 format=3 uid="uid://wis2bhtn8jen"]
+
+[ext_resource type="Script" uid="uid://dq37t3tfea1ae" path="res://Fish Class/fish_resource.gd" id="1_uvw5n"]
+
+[resource]
+script = ExtResource("1_uvw5n")
+fish_species = "Tidewater Goby"
+fish_price = 0
+fish_rarity = 10.0
+metadata/_custom_type_script = "uid://dq37t3tfea1ae"

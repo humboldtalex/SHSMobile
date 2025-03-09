@@ -26,7 +26,6 @@ func _game_end() -> void:
 	get_tree().paused = false
 	queue_free()
 
-
 func _on_target_target_entered() -> void:
 	onCatch = true
 
