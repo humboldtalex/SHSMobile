@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dki8woru12pka"]
+
+[ext_resource type="Script" uid="uid://cl2lt1lxgynxc" path="res://hide_button.gd" id="1_okrhp"]
+[ext_resource type="Script" uid="uid://x83dw7qr6slg" path="res://fish_tut.gd" id="1_ttadj"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.431
+anchor_bottom = 0.29
+offset_right = -0.480011
+offset_bottom = -1.00006
+script = ExtResource("1_ttadj")
+
+[node name="Label" type="Label" parent="PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Welcome to our fishing game.
+To catch a fish just swipe the bobber towards the fish, once the 
+progress bar is full you will have successfully caught the fish"
+
+[node name="Button" type="Button" parent="PanelContainer"]
+layout_mode = 2
+script = ExtResource("1_okrhp")
