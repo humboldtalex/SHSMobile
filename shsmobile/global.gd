@@ -20,11 +20,10 @@ var tree_upgrade : int = 0
 var all_time_tokens : int = 0
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept"):
+	if event.is_action_pressed("ui_left"):
+		tokens -= 1
+	if event.is_action_pressed("ui_right"):
 		tokens += 1
-	if event.is_action_pressed("ui_down"):
-		save_game()
-
 func _ready():
 	load_game()
 
