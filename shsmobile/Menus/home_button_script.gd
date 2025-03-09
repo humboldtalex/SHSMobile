@@ -7,5 +7,5 @@ func _ready():
 	back_button.connect("pressed", on_back_pressed)
 	
 func on_back_pressed():
-	transition_screen.transition_to_scene("res://Menus/MainMenu/main_menu.tscn")
+	transition_screen.transition_to_scene("res://PlayScenes/Home/home.tscn")
 	print("Back button presed")
