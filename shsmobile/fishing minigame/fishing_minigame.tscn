@@ -71,14 +71,13 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_0puc6")
 
-[node name="Fish" parent="FishingGame" node_paths=PackedStringArray("aquaContainer") instance=ExtResource("4_1qkt0")]
-position = Vector2(154, 161)
-scale = Vector2(4, 4)
-aquaContainer = NodePath("../PanelContainer/MarginContainer/VBoxContainer/AquaContainer")
-
 [node name="Target" parent="FishingGame" instance=ExtResource("6_vxgsl")]
 position = Vector2(540, 2200)
 scale = Vector2(2, 2)
+
+[node name="Fish" parent="FishingGame" node_paths=PackedStringArray("aquaContainer") instance=ExtResource("4_1qkt0")]
+position = Vector2(527, 464)
+aquaContainer = NodePath("../PanelContainer/MarginContainer/VBoxContainer/AquaContainer")
 
 [node name="Control" parent="." instance=ExtResource("5_m7ou7")]
 

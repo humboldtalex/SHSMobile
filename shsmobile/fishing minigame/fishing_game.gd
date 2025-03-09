@@ -10,10 +10,10 @@ func _ready():
 	FishingThemeStream.play()
 	
 func _on_target_target_entered() -> void: #Func executes when fish is caught
+	fish.visible = false
 	
-	pass
 	
 
 func _on_target_target_exited() -> void:	#Func exectes when fish game resets
+	fish.visible = true
 	
-	pass

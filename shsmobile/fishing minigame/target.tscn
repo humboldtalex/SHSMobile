@@ -1,7 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3t8ptgatajj7"]
+[gd_scene load_steps=16 format=3 uid="uid://d3t8ptgatajj7"]
 
 [ext_resource type="Script" uid="uid://dh5xriv43l0to" path="res://fishing minigame/target.gd" id="1_tturu"]
 [ext_resource type="Texture2D" uid="uid://bbubb2ug7e8eq" path="res://fishing minigame/assets/bobber.png" id="2_gfqbv"]
+[ext_resource type="Script" uid="uid://dq37t3tfea1ae" path="res://Fish Class/fish_resource.gd" id="2_voi6t"]
+[ext_resource type="Resource" uid="uid://c2vtc5oxcojjt" path="res://Fish Class/Fish Instances/chinook_salmon.tres" id="3_yo7n1"]
+[ext_resource type="Resource" uid="uid://c7hk47xpb0u2o" path="res://Fish Class/Fish Instances/coastrange_sculpin.tres" id="4_83nf1"]
+[ext_resource type="Resource" uid="uid://bou4u4r62rrhx" path="res://Fish Class/Fish Instances/coho_salmon.tres" id="5_m8b1h"]
+[ext_resource type="Resource" uid="uid://ks705vu0m8q0" path="res://Fish Class/Fish Instances/green_sturgeon.tres" id="6_jf6pv"]
+[ext_resource type="Resource" uid="uid://knjyfpjyuboi" path="res://Fish Class/Fish Instances/pacific_staghorn_sculpin.tres" id="7_qxp62"]
+[ext_resource type="Resource" uid="uid://wt3nn2scuj1q" path="res://Fish Class/Fish Instances/sacramento_sculpin.tres" id="8_q4xkf"]
+[ext_resource type="Resource" uid="uid://beih72miqaytg" path="res://Fish Class/Fish Instances/shiner_perch.tres" id="9_pwu0n"]
+[ext_resource type="Resource" uid="uid://bxwboo02qkrns" path="res://Fish Class/Fish Instances/steelhead_trout.tres" id="10_xlpxl"]
+[ext_resource type="Resource" uid="uid://dkaxb1wyqmmgy" path="res://Fish Class/Fish Instances/three_spined_stickle.tres" id="11_v23t6"]
+[ext_resource type="Resource" uid="uid://wis2bhtn8jen" path="res://Fish Class/Fish Instances/tidewater_goby.tres" id="12_70sp5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gfqbv"]
 radius = 300.0
@@ -12,6 +23,7 @@ point_count = 3
 
 [node name="Target" type="Area2D"]
 script = ExtResource("1_tturu")
+fish_array = Array[ExtResource("2_voi6t")]([ExtResource("3_yo7n1"), ExtResource("4_83nf1"), ExtResource("5_m8b1h"), ExtResource("6_jf6pv"), ExtResource("7_qxp62"), ExtResource("8_q4xkf"), ExtResource("9_pwu0n"), ExtResource("10_xlpxl"), ExtResource("11_v23t6"), ExtResource("12_70sp5")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)

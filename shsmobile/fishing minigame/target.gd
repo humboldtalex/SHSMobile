@@ -1,6 +1,7 @@
 extends Area2D
 @onready var fish_line: Line2D = $FishLine
 @onready var sprite_2d: Sprite2D = $Sprite2D
+@export var fish_array:Array[Fish]
 signal target_entered()
 signal target_exited()
 
@@ -71,7 +72,7 @@ func _process(delta):
 func _check_on_fish() -> void:
 	if not respawn: 
 		sprite_2d.scale = Vector2(.25,.25)
-		sprite_2d.position += Vector2(50,0)
+		sprite_2d.position -= Vector2(50,0)
 		target_exited.emit()
 		sprite_2d.texture = load("res://fishing minigame/assets/bobber.png")
 	elif not get_overlapping_bodies().is_empty() and respawn: 
@@ -108,8 +109,9 @@ func _check_on_fish() -> void:
 			print("Tidewater Goby")
 			index =9
 		delay = 4
+		
 		sprite_2d.texture = load("res://fishing minigame/assets/crosshair026.png")
 		sprite_2d.scale = Vector2(1,1)
-		sprite_2d.position -= Vector2(50,0)
+		sprite_2d.position = Vector2.ZERO
 		target_entered.emit()
 		
