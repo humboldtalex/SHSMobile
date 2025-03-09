@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Fish" load_steps=2 format=3 uid="uid://knjyfpjyuboi"]
+
+[ext_resource type="Script" uid="uid://dq37t3tfea1ae" path="res://Fish Class/fish_resource.gd" id="1_27bim"]
+
+[resource]
+script = ExtResource("1_27bim")
+fish_species = "Pacific Staghorn Sculpin"
+fish_price = 0
+fish_rarity = 0.17
+metadata/_custom_type_script = "uid://dq37t3tfea1ae"

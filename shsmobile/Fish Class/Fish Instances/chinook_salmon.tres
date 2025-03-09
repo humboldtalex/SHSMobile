@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Fish" load_steps=2 format=3 uid="uid://c2vtc5oxcojjt"]
+
+[ext_resource type="Script" uid="uid://dq37t3tfea1ae" path="res://Fish Class/fish_resource.gd" id="1_0er36"]
+
+[resource]
+script = ExtResource("1_0er36")
+fish_species = "Chinook Salmon"
+fish_price = 0
+fish_rarity = 0.08
+metadata/_custom_type_script = "uid://dq37t3tfea1ae"
