@@ -11,7 +11,7 @@ var click_position = Vector2()
 var target_position = Vector2()
 
 func _physics_process(delta):
-	if Input.is_action_just_pressed("click"):
+	if Input.is_action_pressed("click"):
 		click_position = get_global_mouse_position()
 		click_position.x = clampf(click_position.x, min_bound.x, max_bound.x)
 		click_position.y = clampf(click_position.y, min_bound.y, max_bound.y)
