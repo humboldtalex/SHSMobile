@@ -8,5 +8,5 @@ func _ready():
 	
 func on_back_pressed():
 	transition_screen.transition_to_scene("res://Menus/MainMenu/main_menu.tscn")
-	print("Back button presed")
+
 	

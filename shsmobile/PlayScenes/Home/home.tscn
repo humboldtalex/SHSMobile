@@ -20,7 +20,7 @@ mouse_filter = 2
 texture = ExtResource("1_fmrtn")
 
 [node name="FoodBowl" parent="." instance=ExtResource("6_1ftow")]
-position = Vector2(221, 830)
+position = Vector2(249, 1414)
 
 [node name="AnimalCharacter" parent="." instance=ExtResource("2_ulxos")]
 position = Vector2(540, 980)
