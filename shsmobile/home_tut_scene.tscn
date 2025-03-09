@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dgyjrqbhx8q0p"]
+[gd_scene load_steps=2 format=3 uid="uid://dgyjrqbhx8q0p"]
+
+[ext_resource type="Script" uid="uid://dqyae5dnw7eu7" path="res://home_tut_exit_button.gd" id="1_3g3hi"]
 
 [node name="Home_tut_panel" type="Control"]
 layout_mode = 3
@@ -25,3 +27,7 @@ To move around just tap on the screen, tap on the bottom to access the fishing m
 Collect fish and coins to get new furniture to make the best home for your animal.
 Click on your fish tank to see all the kinds of fish you have caught.
 Have fun :)"
+
+[node name="Button" type="Button" parent="PanelContainer"]
+layout_mode = 2
+script = ExtResource("1_3g3hi")
