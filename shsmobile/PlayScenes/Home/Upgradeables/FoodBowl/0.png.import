@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bty24h3jnbvh2"
-path="res://.godot/imported/3.png-5f5341f2c785bddff5f4c8af994b45d3.ctex"
+uid="uid://d1mtw5ogcg7ul"
+path="res://.godot/imported/0.png-929841522a61dfc48a080c15ca5a3202.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PlayScenes/FoodBowl/3.png"
-dest_files=["res://.godot/imported/3.png-5f5341f2c785bddff5f4c8af994b45d3.ctex"]
+source_file="res://PlayScenes/Home/Upgradeables/FoodBowl/0.png"
+dest_files=["res://.godot/imported/0.png-929841522a61dfc48a080c15ca5a3202.ctex"]
 
 [params]
 
