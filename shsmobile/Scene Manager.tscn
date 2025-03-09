@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtv4audntbb6a"]
-
-[ext_resource type="PackedScene" uid="uid://bv73byg25sqmo" path="res://Transition/transition_screen.tscn" id="1_cg65a"]
-
-[node name="SceneManager" type="Node"]
-
-[node name="Current Scene" type="Node" parent="."]
-
-[node name="Transition Screen" parent="." instance=ExtResource("1_cg65a")]
