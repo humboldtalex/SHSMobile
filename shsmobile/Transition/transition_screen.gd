@@ -6,6 +6,7 @@ var scene_path : String = ""
 
 func _ready():
 	$AnimationPlayer.play("fade_to_normal")
+	show()
 
 func transition_to_scene(path_to_scene : String):
 	$AnimationPlayer.play("fade_to_black")

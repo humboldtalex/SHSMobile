@@ -1,18 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuq01oegh3gne"]
+[gd_scene load_steps=6 format=3 uid="uid://cuq01oegh3gne"]
 
 [ext_resource type="Script" uid="uid://bf77e8txtpo7j" path="res://Menus/MainMenu/main_menu.gd" id="1_3e31c"]
+[ext_resource type="Shader" uid="uid://cs8mecm5t8lsy" path="res://Menus/MainMenu/scrolling_background.gdshader" id="2_y4ryc"]
+[ext_resource type="Texture2D" uid="uid://d4bvs7v8wlhyb" path="res://Menus/scrolling_pattern.png" id="3_7f67a"]
 [ext_resource type="PackedScene" uid="uid://bv73byg25sqmo" path="res://Transition/transition_screen.tscn" id="4_y4ryc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lkur8"]
+shader = ExtResource("2_y4ryc")
+shader_parameter/scroll_speed = 0.04
+shader_parameter/angle_degrees = 315.0
+shader_parameter/repeat_x = 5.0
+shader_parameter/repeat_y = 10.0
+shader_parameter/row_offset = 1.0
+shader_parameter/texture_to_scroll = ExtResource("3_7f67a")
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3e31c")
+
+[node name="ScrollingBackground" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_lkur8")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -44,3 +62,4 @@ text = "Credits"
 layout_mode = 2
 
 [node name="Transition Screen" parent="." instance=ExtResource("4_y4ryc")]
+visible = false
