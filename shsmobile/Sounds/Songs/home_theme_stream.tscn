@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cd0wrv122tbt6"]
+
+[ext_resource type="AudioStream" uid="uid://cg5ng8qjmw4y7" path="res://Sounds/Songs/day loop.mp3" id="1_eaxyc"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_eaxyc")
+bus = &"Music"

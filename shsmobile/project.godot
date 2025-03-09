@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 MenuThemeStream="*res://Sounds/Songs/menu_theme_stream.tscn"
+HomeThemeStream="*res://Sounds/Songs/home_theme_stream.tscn"
+FishingThemeStream="*res://Sounds/Songs/fishing_theme_stream.tscn"
 
 [display]
 
@@ -38,3 +40,4 @@ click={
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

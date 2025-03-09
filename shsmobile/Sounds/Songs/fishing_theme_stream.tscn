@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dleuf2mi8l4v7"]
+
+[ext_resource type="AudioStream" uid="uid://c4fvlkrlh57ox" path="res://Sounds/Songs/this has to be fishing.mp3" id="1_5pnot"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_5pnot")
+bus = &"Music"

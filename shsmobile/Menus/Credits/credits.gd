@@ -1,6 +1,6 @@
 extends Control
 
-@onready var back_button : Button = $VBoxContainer/BackButton
+@onready var back_button : Button = $PanelContainer/VBoxContainer/BackButton
 @onready var transition_screen: CanvasLayer = $"Transition Screen"
 
 func _ready():
