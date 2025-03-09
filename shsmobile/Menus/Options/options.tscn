@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1fhtske6up21"]
+[gd_scene load_steps=4 format=3 uid="uid://b1fhtske6up21"]
 
 [ext_resource type="Script" uid="uid://bn34mlnycyu7n" path="res://Menus/Options/options.gd" id="1_k1pc4"]
 [ext_resource type="Script" uid="uid://c20yne2s82iif" path="res://Menus/Options/music_volume_slider.gd" id="1_wocl7"]
+[ext_resource type="PackedScene" uid="uid://bv73byg25sqmo" path="res://Transition/transition_screen.tscn" id="3_k1pc4"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -46,3 +47,5 @@ script = ExtResource("1_wocl7")
 [node name="BackButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Back"
+
+[node name="Transition Screen" parent="." instance=ExtResource("3_k1pc4")]

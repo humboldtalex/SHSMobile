@@ -15,6 +15,10 @@ run/main_scene="uid://cuq01oegh3gne"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MenuThemeStream="*res://Sounds/Songs/menu_theme_stream.tscn"
+
 [display]
 
 window/size/viewport_width=1080

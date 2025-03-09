@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://1n3oxryyksbp"]
+
+[ext_resource type="AudioStream" uid="uid://bv63hatbk3h85" path="res://Sounds/Songs/night loop.mp3" id="1_p5anw"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_p5anw")
+autoplay = true
+bus = &"Music"

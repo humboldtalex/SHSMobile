@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://5ygvvibw201k"]
+[gd_scene load_steps=3 format=3 uid="uid://5ygvvibw201k"]
 
 [ext_resource type="Script" uid="uid://bo51ix1m18snd" path="res://Menus/Credits/credits.gd" id="1_a0wjq"]
+[ext_resource type="PackedScene" uid="uid://bv73byg25sqmo" path="res://Transition/transition_screen.tscn" id="2_mosgp"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -39,3 +40,5 @@ horizontal_alignment = 1
 [node name="BackButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Back"
+
+[node name="Transition Screen" parent="." instance=ExtResource("2_mosgp")]
