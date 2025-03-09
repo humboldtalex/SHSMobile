@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://bnfnfk8e6p8j0" path="res://PlayScenes/Home/Upgradeables/FoodBowl/food_control.gd" id="7_bltlb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dtd4b"]
-radius = 116.349
+radius = 39.2173
 
 [node name="FoodBowl" type="Area2D"]
 script = ExtResource("1_ip5el")

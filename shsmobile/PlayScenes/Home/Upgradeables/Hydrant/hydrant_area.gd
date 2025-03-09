@@ -2,7 +2,7 @@ extends Area2D
 
 var stage : int = 4
 
-@onready var bed_sprite: Sprite2D = $BedSprite
+@onready var hydrant_sprite: Sprite2D = $HydrantSprite
 @onready var control: Control = $Control
 
 @export var sprite_array : Array[Texture2D] = []
@@ -20,20 +20,20 @@ func _input(event: InputEvent) -> void:
 		downgrade()
 
 func _process(delta):
-	stage = Global.bed_upgrade
-	bed_sprite.texture = sprite_array[stage]
+	stage = Global.hydrant_upgrade
+	hydrant_sprite.texture = sprite_array[stage]
 	
 func upgrade():
 	if stage == 4:
 		print("too big")
 	else:
-		Global.bed_upgrade += 1
+		Global.hydrant_upgrade += 1
 
 func downgrade():
 	if stage <= 0:
 		print("too small")
 	else:
-		Global.bed_upgrade -= 1
+		Global.hydrant_upgrade -= 1
 
 # COLLISION DETECTION
 func _on_body_entered(body):
