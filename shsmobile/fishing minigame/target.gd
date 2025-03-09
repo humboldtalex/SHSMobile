@@ -1,4 +1,5 @@
 extends Area2D
+@onready var fish_line: Line2D = $FishLine
 
 signal target_entered()
 signal target_exited()
@@ -39,6 +40,7 @@ func _process(delta):
 	if speed > 0:
 		global_position += direction * speed * delta / 2 	#Moves target
 		speed -= 7000 * delta								#Target deceleration
+		
 		#print(speed)
 		if speed < 50:		#Speed cutoff, below this point, target 'hits the water'
 			speed = 0
