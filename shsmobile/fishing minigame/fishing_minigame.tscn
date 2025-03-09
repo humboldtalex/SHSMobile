@@ -95,5 +95,10 @@ aquaContainer = NodePath("../PanelContainer/MarginContainer/VBoxContainer/AquaCo
 position = Vector2(487, 2231)
 scale = Vector2(2, 2)
 
+[node name="Fish2" parent="FishingGame" node_paths=PackedStringArray("aquaContainer") instance=ExtResource("4_1qkt0")]
+position = Vector2(770, 805)
+scale = Vector2(4, 4)
+aquaContainer = NodePath("../PanelContainer/MarginContainer/VBoxContainer/AquaContainer")
+
 [connection signal="target_entered" from="FishingGame/Target" to="FishingGame" method="_on_target_target_entered"]
 [connection signal="target_exited" from="FishingGame/Target" to="FishingGame" method="_on_target_target_exited"]
