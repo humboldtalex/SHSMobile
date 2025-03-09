@@ -1,20 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://bncch0k3ko2tk"]
+[gd_scene load_steps=5 format=3 uid="uid://bncch0k3ko2tk"]
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 [ext_resource type="Script" path="res://PlayScenes/Home/home.gd" id="1_ulxos"]
 [ext_resource type="Texture2D" uid="uid://no2ffjnwcrsh" path="res://PlayScenes/Home/HomeBackground.png" id="2_k1njd"]
 [ext_resource type="PackedScene" uid="uid://bgyqbh5cssr2s" path="res://Characters/Animal/animal_character.tscn" id="2_ulxos"]
+=======
+[ext_resource type="Script" uid="uid://4s0igih80kap" path="res://PlayScenes/Home/home.gd" id="1_ulxos"]
+[ext_resource type="Script" uid="uid://bxx4k6lwgl2fr" path="res://PlayScenes/Home/character_body_2d.gd" id="2_k1njd"]
+[ext_resource type="Texture2D" uid="uid://shy75sqjl6ow" path="res://icon.svg" id="3_1va7s"]
+[ext_resource type="Texture2D" uid="uid://dtbwwt5gip1mo" path="res://PlayScenes/Home/grass.jpg" id="4_1va7s"]
+>>>>>>> parent of 07d777e (Started prettying up the home base)
 
 [node name="Home" type="Node2D"]
 script = ExtResource("1_ulxos")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1080.0
-offset_bottom = 2400.0
-texture = ExtResource("2_k1njd")
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(200, 200)
+input_pickable = true
+script = ExtResource("2_k1njd")
 
+<<<<<<< HEAD
 [node name="AnimalCharacter" parent="." instance=ExtResource("2_ulxos")]
 position = Vector2(214, 622)
 =======
 [node name="Home" type="Node2D"]
 >>>>>>> Stashed changes
+=======
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("3_1va7s")
+
+[node name="Ground" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(206, 257)
+texture = ExtResource("4_1va7s")
+>>>>>>> parent of 07d777e (Started prettying up the home base)
