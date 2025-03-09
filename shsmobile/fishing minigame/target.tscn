@@ -1,16 +1,24 @@
 [gd_scene load_steps=4 format=3 uid="uid://d3t8ptgatajj7"]
 
 [ext_resource type="Script" uid="uid://dh5xriv43l0to" path="res://fishing minigame/target.gd" id="1_tturu"]
-[ext_resource type="Texture2D" uid="uid://cebxve41gms4r" path="res://fishing minigame/assets/crosshair026.png" id="2_kp1jm"]
+[ext_resource type="Texture2D" uid="uid://bbubb2ug7e8eq" path="res://fishing minigame/assets/bobber.png" id="2_gfqbv"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ktnj"]
-size = Vector2(45, 45)
+[sub_resource type="CircleShape2D" id="CircleShape2D_gfqbv"]
+radius = 50.0
 
 [node name="Target" type="Area2D"]
 script = ExtResource("1_tturu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_kp1jm")
+rotation = 4.71239
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_gfqbv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_5ktnj")
+shape = SubResource("CircleShape2D_gfqbv")
+
+[node name="FishLine" type="Line2D" parent="."]
+points = PackedVector2Array(-37, 0, 0, 50)
+closed = true
+width = 2.0
+default_color = Color(0, 0, 0, 1)

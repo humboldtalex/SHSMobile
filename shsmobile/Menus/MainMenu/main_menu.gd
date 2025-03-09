@@ -8,6 +8,10 @@ extends Control
 func _ready():
 	credits_button.connect("pressed", on_credits_pressed)
 	options_button.connect("pressed", on_options_pressed)
+	start_button.connect("pressed", on_start_pressed)
+	MenuThemeStream.play()
+	HomeThemeStream.stop()
+	FishingThemeStream.stop()
 
 func _process(delta):
 	pass
@@ -17,4 +21,7 @@ func on_credits_pressed():
 	
 func on_options_pressed():
 	transition_screen.transition_to_scene("res://Menus/Options/options.tscn")
+	
+func on_start_pressed():
+	transition_screen.transition_to_scene("res://PlayScenes/Home/home.tscn")
 	

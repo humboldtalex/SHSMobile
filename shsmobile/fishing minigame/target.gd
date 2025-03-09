@@ -1,27 +1,57 @@
 extends Area2D
+@onready var fish_line: Line2D = $FishLine
 
 signal target_entered()
 signal target_exited()
 
-const SPEED := 200
-
+var speed := 0
+var START_POS := Vector2.ZERO
+var start_position := Vector2.ZERO
+var end_position := Vector2.ZERO
+var time : float= 0
+var direction := Vector2.ZERO
 var on_fish := false
+var delay : float = 1
+var respawn : bool = false
+
+func _ready() -> void:
+	START_POS = global_position
 
 func _physics_process(delta: float) -> void:
 	_check_on_fish()
-
-	var direction := Vector2.ZERO
+	#print(respawn)
 	
-	if Input.is_action_just_pressed("click"):
-		print(get_global_mouse_position())
-	if Input.is_action_just_released("click"):
-		print(get_global_mouse_position())
-	direction.x = Input.get_axis("ui_left", "ui_right")
-	direction.y = Input.get_axis("ui_up", "ui_down")
+	if speed == 0 && respawn == false:
+		if Input.is_action_just_pressed("click"):
+			#print(get_global_mouse_position())
+			start_position = get_global_mouse_position()
+			time = 0
+		if Input.is_action_just_released("click"):
+			#print(get_global_mouse_position())
+			end_position = get_global_mouse_position()
+			#print(time)
+			#print(end_position - start_position)
+			direction = (end_position - start_position)
+			speed = direction.length() / time
+			direction = direction.normalized()
 	
+func _process(delta):
+	time = time + delta
+	if speed > 0:
+		global_position += direction * speed * delta / 2 	#Moves target
+		speed -= 7000 * delta								#Target deceleration
+		
+		#print(speed)
+		if speed < 50:		#Speed cutoff, below this point, target 'hits the water'
+			speed = 0
+			respawn = true
+	if respawn == true:		#countdown before respawning target
+		delay -= delta
+		if delay < 0:
+			delay = 1
+			respawn = false
+			global_position = START_POS
 	
-	global_position += direction * SPEED * delta
-
 func _check_on_fish() -> void:
 	var bodies := get_overlapping_bodies()
 
@@ -31,3 +61,4 @@ func _check_on_fish() -> void:
 	elif not bodies.is_empty() and not on_fish: 
 		on_fish = true
 		target_entered.emit()
+		
