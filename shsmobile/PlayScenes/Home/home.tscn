@@ -1,38 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bncch0k3ko2tk"]
+[gd_scene load_steps=3 format=3 uid="uid://b85mkal8054sq"]
 
-[ext_resource type="Script" uid="uid://4s0igih80kap" path="res://PlayScenes/Home/home.gd" id="1_ulxos"]
-[ext_resource type="PackedScene" path="res://Characters/Cat/animal.tscn" id="3_k1njd"]
-[ext_resource type="Material" uid="uid://c0gugnr4mpblx" path="res://Materials/basic_water_material.material" id="4_1va7s"]
+[ext_resource type="Texture2D" uid="uid://ocvhgvwvt0qq" path="res://PlayScenes/Home/HomeBackground.png" id="1_fmrtn"]
+[ext_resource type="PackedScene" uid="uid://wkehnjdyhgna" path="res://Characters/Animal/animal_character.tscn" id="2_ulxos"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1va7s"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+[node name="Home" type="Node2D"]
 
-[sub_resource type="Sky" id="Sky_eupmo"]
-sky_material = SubResource("ProceduralSkyMaterial_1va7s")
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1080.0
+offset_bottom = 2400.0
+texture = ExtResource("1_fmrtn")
 
-[sub_resource type="Environment" id="Environment_1ftow"]
-background_mode = 2
-sky = SubResource("Sky_eupmo")
-tonemap_mode = 2
-glow_enabled = true
-
-[node name="Home" type="Node3D"]
-script = ExtResource("1_ulxos")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_1ftow")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.79229, 0.49919, -0.350837, 0, 0.575005, 0.81815, 0.610145, -0.648212, 0.455571, 0, 0, 0)
-shadow_enabled = true
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2, 2)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-size = Vector3(5, 1, 5)
-material = ExtResource("4_1va7s")
-
-[node name="Animal" parent="." instance=ExtResource("3_k1njd")]
+[node name="AnimalCharacter" parent="." instance=ExtResource("2_ulxos")]
+position = Vector2(250, 697)

@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=3 uid="uid://wkehnjdyhgna"]
+
+[ext_resource type="Script" uid="uid://bxx4k6lwgl2fr" path="res://PlayScenes/Home/character_body_2d.gd" id="1_cw0ks"]
+[ext_resource type="PackedScene" uid="uid://bqwaahgemn838" path="res://Characters/Animal/animal_model.tscn" id="2_k3l8p"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cw0ks"]
+blend_mode = 3
+
+[sub_resource type="Gradient" id="Gradient_k3l8p"]
+interpolation_mode = 2
+colors = PackedColorArray(0.458405, 0.458405, 0.458405, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xrx2v"]
+gradient = SubResource("Gradient_k3l8p")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cw0ks"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_k3l8p"]
+sky_material = SubResource("ProceduralSkyMaterial_cw0ks")
+
+[sub_resource type="Environment" id="Environment_xrx2v"]
+background_mode = 2
+sky = SubResource("Sky_k3l8p")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cw0ks"]
+radius = 90.0
+height = 428.0
+
+[node name="AnimalCharacter" type="CharacterBody2D"]
+script = ExtResource("1_cw0ks")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_cw0ks")
+position = Vector2(0, 196.596)
+scale = Vector2(5.62891, 1.85972)
+texture = SubResource("GradientTexture2D_xrx2v")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport"]
+environment = SubResource("Environment_xrx2v")
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.902585, 0.430511, 0, -0.430511, 0.902585, 0, 1.41282, 1.91363)
+projection = 1
+current = true
+size = 1.2
+
+[node name="AnimalModel" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_k3l8p")]
+
+[node name="BoneAttachment3D" parent="SubViewportContainer/SubViewport/AnimalModel/Armature/Skeleton3D" index="0"]
+transform = Transform3D(1, -7.10543e-15, 2.38419e-07, -7.10543e-15, 1, 5.96047e-08, -2.38419e-07, -5.96047e-08, 1, -3.03129e-15, 0.597473, -2.54283e-08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_cw0ks")
+
+[editable path="SubViewportContainer/SubViewport/AnimalModel"]
