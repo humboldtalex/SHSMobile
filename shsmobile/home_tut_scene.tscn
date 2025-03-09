@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dgyjrqbhx8q0p"]
+[gd_scene load_steps=0 format=3 uid="uid://dgyjrqbhx8q0p"]
 
 [node name="Home_tut_panel" type="Control"]
 layout_mode = 3
