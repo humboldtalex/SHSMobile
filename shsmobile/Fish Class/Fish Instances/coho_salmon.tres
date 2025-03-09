@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="Fish" load_steps=2 format=3 uid="uid://bou4u4r62rrhx"]
+[gd_resource type="Resource" script_class="Fish" load_steps=3 format=3 uid="uid://bou4u4r62rrhx"]
 
 [ext_resource type="Script" uid="uid://dq37t3tfea1ae" path="res://Fish Class/fish_resource.gd" id="1_3v07a"]
+[ext_resource type="Texture2D" uid="uid://1bjlixmtbjhd" path="res://Fish Class/FishTextures/coho_salmon.png" id="1_w3ljo"]
 
 [resource]
 script = ExtResource("1_3v07a")
 fish_species = "Coho Salmon"
-fish_price = 0
+fish_price = 8
+fish_sprite = ExtResource("1_w3ljo")
 fish_rarity = 0.05
 metadata/_custom_type_script = "uid://dq37t3tfea1ae"

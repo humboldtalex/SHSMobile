@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmdi3a534vxyg"
-path="res://.godot/imported/bubbles.png-4a1f97bc9d7fb5e10d8d34016a12286f.ctex"
+uid="uid://bgit3m3xkei1g"
+path="res://.godot/imported/0.png-92991a43925f975f6895295f44023517.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fishing minigame/assets/bubbles.png"
-dest_files=["res://.godot/imported/bubbles.png-4a1f97bc9d7fb5e10d8d34016a12286f.ctex"]
+source_file="res://PlayScenes/Home/Upgradeables/Hydrant/0.png"
+dest_files=["res://.godot/imported/0.png-92991a43925f975f6895295f44023517.ctex"]
 
 [params]
 

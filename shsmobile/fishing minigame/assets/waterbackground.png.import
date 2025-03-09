@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmdi3a534vxyg"
-path="res://.godot/imported/bubbles.png-4a1f97bc9d7fb5e10d8d34016a12286f.ctex"
+uid="uid://8c71qj23rra5"
+path="res://.godot/imported/waterbackground.png-8e23783df4753d4da7d189e8de2047aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fishing minigame/assets/bubbles.png"
-dest_files=["res://.godot/imported/bubbles.png-4a1f97bc9d7fb5e10d8d34016a12286f.ctex"]
+source_file="res://fishing minigame/assets/waterbackground.png"
+dest_files=["res://.godot/imported/waterbackground.png-8e23783df4753d4da7d189e8de2047aa.ctex"]
 
 [params]
 
