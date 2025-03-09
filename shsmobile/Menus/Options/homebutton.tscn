@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://rfsc4mepjwq5"]
+
+[ext_resource type="Script" uid="uid://dmc378sdgladb" path="res://Menus/Options/homebutton.gd" id="1_6rath"]
+[ext_resource type="FontFile" uid="uid://by7a8b53sxlvx" path="res://Textures/supermario85/SuperMario85.ttf" id="1_orj3i"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6rath")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.256
+anchor_bottom = 0.045
+offset_right = -0.480011
+offset_bottom = -1.00001
+theme_override_fonts/font = ExtResource("1_orj3i")
+theme_override_font_sizes/font_size = 75
+text = "Home"

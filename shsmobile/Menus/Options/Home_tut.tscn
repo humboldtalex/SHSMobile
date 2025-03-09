@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck1a2flydhjau"]
+
+[ext_resource type="Script" uid="uid://botdw4uub3x0l" path="res://fish_tut.gd" id="1_yigug"]
+[ext_resource type="FontFile" uid="uid://cki15b6pc4s1m" path="res://Menus/Options/supermario85/SuperMario85.ttf" id="2_np47i"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yigug")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 2400.0
+
+[node name="Button" type="Button" parent="PanelContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_np47i")
+theme_override_font_sizes/font_size = 100
+text = "Wecolme to our game!
+
+To move around just 
+tap on the screen.
+
+The goal of the game
+is to upgrade your
+animal's house.
+
+Collect coins by 
+fishing.
+
+Click the bottom 
+of the screen to
+enter the fishing
+game.
+
+Have Fun :)"
+icon_alignment = 1
