@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1fhtske6up21"]
+[gd_scene load_steps=10 format=3 uid="uid://b1fhtske6up21"]
 
 [ext_resource type="Script" uid="uid://bn34mlnycyu7n" path="res://Menus/Options/options.gd" id="1_k1pc4"]
 [ext_resource type="Script" uid="uid://c20yne2s82iif" path="res://Menus/Options/music_volume_slider.gd" id="1_wocl7"]
@@ -15,6 +15,12 @@ shader_parameter/repeat_x = 5.0
 shader_parameter/repeat_y = 10.0
 shader_parameter/row_offset = 1.0
 shader_parameter/texture_to_scroll = ExtResource("3_vmwe0")
+
+[sub_resource type="Theme" id="Theme_vmwe0"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_lvv6v"]
+color = Color(0.362037, 0.139451, 0, 1)
+thickness = 20
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -66,8 +72,12 @@ vertical_alignment = 1
 
 [node name="musicslider" type="HSlider" parent="PanelContainer/VBoxContainer"]
 modulate = Color(0, 1, 1, 1)
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
+size_flags_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_vmwe0")
+theme_override_styles/slider = SubResource("StyleBoxLine_lvv6v")
 max_value = 1.0
 step = 0.05
 script = ExtResource("1_wocl7")
