@@ -1,8 +1,8 @@
 extends Control
 
-@onready var start_button: Button = $VBoxContainer/StartButton
-@onready var options_button: Button = $VBoxContainer/OptionsButton
-@onready var credits_button: Button = $VBoxContainer/CreditsButton
+@onready var start_button: Button = $PanelContainer/VBoxContainer/StartButton
+@onready var options_button: Button = $PanelContainer/VBoxContainer/OptionsButton
+@onready var credits_button: Button = $PanelContainer/VBoxContainer/CreditsButton
 @onready var transition_screen: CanvasLayer = $"Transition Screen"
 
 func _ready():

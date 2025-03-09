@@ -6,6 +6,11 @@ var onCatch := false
 var catchSpeed := 0.3
 var catchingValue := 0.0
 
+func _ready():
+	MenuThemeStream.stop()
+	HomeThemeStream.stop()
+	FishingThemeStream.play()
+
 func _physics_process(delta: float) -> void:
 	if onCatch: catchingValue += catchSpeed
 	else: catchingValue -= catchSpeed

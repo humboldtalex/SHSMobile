@@ -7,7 +7,7 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $SubViewportContainer/SubViewport/AnimalModel/AnimationPlayer
 @onready var animal_model: Node3D = $SubViewportContainer/SubViewport/AnimalModel
 
-var click_position = Vector2()
+var click_position = Vector2(540, 980)
 var target_position = Vector2()
 
 func _physics_process(delta):

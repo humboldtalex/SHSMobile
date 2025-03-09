@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bncch0k3ko2tk"]
+[gd_scene load_steps=6 format=3 uid="uid://b85mkal8054sq"]
 
 [ext_resource type="Script" uid="uid://4s0igih80kap" path="res://PlayScenes/Home/home.gd" id="1_eupmo"]
 [ext_resource type="Texture2D" uid="uid://ocvhgvwvt0qq" path="res://PlayScenes/Home/HomeBackground.png" id="1_fmrtn"]
-[ext_resource type="PackedScene" uid="uid://bgyqbh5cssr2s" path="res://Characters/Animal/animal_character.tscn" id="2_ulxos"]
+[ext_resource type="PackedScene" uid="uid://wkehnjdyhgna" path="res://Characters/Animal/animal_character.tscn" id="2_ulxos"]
 [ext_resource type="Texture2D" uid="uid://cnibs55wsfdnm" path="res://PlayScenes/Home/HomeTrees.png" id="3_k1njd"]
 [ext_resource type="PackedScene" uid="uid://bv73byg25sqmo" path="res://Transition/transition_screen.tscn" id="4_1va7s"]
 
@@ -16,7 +16,7 @@ mouse_filter = 2
 texture = ExtResource("1_fmrtn")
 
 [node name="AnimalCharacter" parent="." instance=ExtResource("2_ulxos")]
-position = Vector2(536, 978)
+position = Vector2(540, 980)
 
 [node name="Trees" type="TextureRect" parent="."]
 offset_right = 1080.0

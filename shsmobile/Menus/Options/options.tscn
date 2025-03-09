@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bn34mlnycyu7n" path="res://Menus/Options/options.gd" id="1_k1pc4"]
 [ext_resource type="Script" uid="uid://c20yne2s82iif" path="res://Menus/Options/music_volume_slider.gd" id="1_wocl7"]
-[ext_resource type="Shader" path="res://Menus/MainMenu/scrolling_background.gdshader" id="2_7ye4l"]
+[ext_resource type="Shader" uid="uid://cs8mecm5t8lsy" path="res://Menus/MainMenu/scrolling_background.gdshader" id="2_7ye4l"]
 [ext_resource type="PackedScene" uid="uid://bv73byg25sqmo" path="res://Transition/transition_screen.tscn" id="3_k1pc4"]
 [ext_resource type="Texture2D" uid="uid://d4bvs7v8wlhyb" path="res://Menus/scrolling_pattern.png" id="3_vmwe0"]
 [ext_resource type="FontFile" uid="uid://by7a8b53sxlvx" path="res://Textures/supermario85/SuperMario85.ttf" id="4_vmwe0"]
