@@ -1,39 +1,19 @@
 extends Control
 
-@onready var catch_bar: ProgressBar = %CatchBar
-
-var onCatch := false
-var catchSpeed := 0.3
-var catchingValue := 0.0
+@onready var target: Area2D = $Target
+@onready var fish: CharacterBody2D = $Fish
 
 func _ready():
 	MenuThemeStream.stop()
 	HomeThemeStream.stop()
 	FishingThemeStream.play()
-
-func _physics_process(delta: float) -> void:
-	if onCatch: catchingValue += catchSpeed
-	else: catchingValue -= catchSpeed
 	
-	if catchingValue < 0.0: catchingValue = 0
-	elif catchingValue >= 100: _game_end()
-	
-	catch_bar.value = catchingValue
+func _on_target_target_entered() -> void: #Func executes when fish is caught
+	target.visible = false
+	fish.visible = false
+	print("CATCH")
 
-func _game_end() -> void:
-	var tween = get_tree().create_tween()
-	
-	tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
-	tween.tween_property(self, "global_position", global_position + Vector2(0, 700), 0.5)
-	
-	await tween.finished
-
-	get_tree().paused = false
-	queue_free()
-
-
-func _on_target_target_entered() -> void:
-	onCatch = true
-
-func _on_target_target_exited() -> void:
-	onCatch = false
+func _on_target_target_exited() -> void:	#Func exectes when fish game resets
+	target.visible = true					#doesn't care if fish was caught
+	fish.visible = true
+	print("RELEASE/RESET")
