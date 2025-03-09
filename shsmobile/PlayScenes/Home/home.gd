@@ -4,8 +4,9 @@ extends Node2D
 @onready var transition_screen: CanvasLayer = $"Transition Screen"
 
 func _ready():
-	pass
+	MenuThemeStream.stop()
+	HomeThemeStream.play()
 
 func _process(delta):
 	if animal_character.global_position.y > 2000:
-		transition_screen.transition_to_scene("res://fishing minigame/fishing_minigame.tscn")
+		transition_screen.transition_to_scene("res://fishing minigame/fishing_minigame.tscn", true)

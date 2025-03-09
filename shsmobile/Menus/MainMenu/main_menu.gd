@@ -9,6 +9,7 @@ func _ready():
 	credits_button.connect("pressed", on_credits_pressed)
 	options_button.connect("pressed", on_options_pressed)
 	start_button.connect("pressed", on_start_pressed)
+	MenuThemeStream.play()
 
 func _process(delta):
 	pass
