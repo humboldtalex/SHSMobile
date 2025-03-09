@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://tu1y2m1guvd3"]
+
+[ext_resource type="FontFile" uid="uid://cki15b6pc4s1m" path="res://Menus/Options/supermario85/SuperMario85.ttf" id="1_iwndi"]
+
+[resource]
+default_font = ExtResource("1_iwndi")
+default_font_size = 63

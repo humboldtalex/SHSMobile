@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuflrwc0b1kq6"]
+[gd_scene load_steps=3 format=3 uid="uid://dh42nrgwqm0yk"]
 
 [ext_resource type="Script" uid="uid://dmc378sdgladb" path="res://Menus/Options/homebutton.gd" id="1_6rath"]
 [ext_resource type="FontFile" uid="uid://by7a8b53sxlvx" path="res://Textures/supermario85/SuperMario85.ttf" id="1_orj3i"]

@@ -66,7 +66,7 @@ func _process(delta):
 			var line_len : int = fish_line.get_point_count()
 			fish_line.visible = false
 			global_position = START_POS
-			sprite_2d.scale = Vector2(.25,.25)
+			sprite_2d.scale = Vector2(.75,.75)
 			_check_on_fish()
 
 			for i in line_len-2:
@@ -74,7 +74,7 @@ func _process(delta):
 	
 func _check_on_fish() -> void:
 	if not respawn: 
-		sprite_2d.scale = Vector2(.25,.25)
+		sprite_2d.scale = Vector2(.75,.75)
 		#sprite_2d.position -= Vector2(50,0)
 		target_exited.emit()
 		print("RELEASE")

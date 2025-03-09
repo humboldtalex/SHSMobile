@@ -1,7 +1,7 @@
 extends Control
 
-@onready var transition_screen: CanvasLayer = $"../../Transition Screen"
 @onready var button: Button = $Button
+@onready var transition_screen: CanvasLayer = $"../Transition Screen"
 
 func _ready():
 	button.connect("pressed", button_pressed)

@@ -1,13 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://y6loya14qh2u"]
+[gd_scene load_steps=14 format=3 uid="uid://y6loya14qh2u"]
 
 [ext_resource type="Texture2D" uid="uid://fd0acs6wx1qw" path="res://fishing minigame/assets/Box_Orange_Square.png" id="1_grr4j"]
 [ext_resource type="Script" uid="uid://cayk0ijutmy6n" path="res://fishing minigame/fishing_game.gd" id="1_w2e65"]
-[ext_resource type="Shader" path="res://Menus/MainMenu/scrolling_background.gdshader" id="3_jauar"]
+[ext_resource type="Shader" uid="uid://cs8mecm5t8lsy" path="res://Menus/MainMenu/scrolling_background.gdshader" id="3_jauar"]
 [ext_resource type="PackedScene" uid="uid://bhcw6o61k200w" path="res://fishing minigame/fish.tscn" id="4_1qkt0"]
 [ext_resource type="Texture2D" uid="uid://8c71qj23rra5" path="res://fishing minigame/assets/waterbackground.png" id="4_xjigb"]
-[ext_resource type="PackedScene" path="res://Menus/Options/homebutton.tscn" id="5_m7ou7"]
+[ext_resource type="PackedScene" uid="uid://dh42nrgwqm0yk" path="res://Menus/Options/homebutton.tscn" id="5_m7ou7"]
 [ext_resource type="PackedScene" uid="uid://bv73byg25sqmo" path="res://Transition/transition_screen.tscn" id="6_8fk87"]
 [ext_resource type="PackedScene" uid="uid://d3t8ptgatajj7" path="res://fishing minigame/target.tscn" id="6_vxgsl"]
+[ext_resource type="Texture2D" uid="uid://cnibs55wsfdnm" path="res://PlayScenes/Home/HomeTrees.png" id="9_xjigb"]
+[ext_resource type="Theme" uid="uid://tu1y2m1guvd3" path="res://Defaulttheme.tres" id="10_g4gxh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lm2d7"]
 texture = ExtResource("1_grr4j")
@@ -85,11 +87,33 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_0puc6")
 
 [node name="Fish" parent="FishingGame" node_paths=PackedStringArray("aquaContainer") instance=ExtResource("4_1qkt0")]
 position = Vector2(527, 464)
+scale = Vector2(3, 3)
 aquaContainer = NodePath("../PanelContainer/MarginContainer/VBoxContainer/AquaContainer")
 
 [node name="Target" parent="FishingGame" instance=ExtResource("6_vxgsl")]
 
 [node name="Control" parent="." instance=ExtResource("5_m7ou7")]
+offset_left = 59.0
+offset_top = 63.0
+offset_right = 59.0
+offset_bottom = 63.0
 
 [node name="Transition Screen" parent="." instance=ExtResource("6_8fk87")]
+layer = 2
 visible = false
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = 67.0
+offset_right = 1080.0
+offset_bottom = 2467.0
+mouse_filter = 2
+texture = ExtResource("9_xjigb")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 699.0
+offset_top = 94.0
+offset_right = 998.0
+offset_bottom = 158.0
+theme = ExtResource("10_g4gxh")
+text = "10 Tokens"
+horizontal_alignment = 2

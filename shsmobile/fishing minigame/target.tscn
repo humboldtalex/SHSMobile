@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d3t8ptgatajj7"]
+[gd_scene load_steps=17 format=3 uid="uid://d3t8ptgatajj7"]
 
 [ext_resource type="Script" uid="uid://dh5xriv43l0to" path="res://fishing minigame/target.gd" id="1_tturu"]
 [ext_resource type="Texture2D" uid="uid://bbubb2ug7e8eq" path="res://fishing minigame/assets/bobber.png" id="2_gfqbv"]
@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://bxwboo02qkrns" path="res://Fish Class/Fish Instances/steelhead_trout.tres" id="10_xlpxl"]
 [ext_resource type="Resource" uid="uid://dkaxb1wyqmmgy" path="res://Fish Class/Fish Instances/three_spined_stickle.tres" id="11_v23t6"]
 [ext_resource type="Resource" uid="uid://wis2bhtn8jen" path="res://Fish Class/Fish Instances/tidewater_goby.tres" id="12_70sp5"]
+[ext_resource type="Theme" uid="uid://tu1y2m1guvd3" path="res://Defaulttheme.tres" id="14_yo7n1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gfqbv"]
 radius = 300.0
@@ -61,6 +62,8 @@ offset_bottom = 323.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 3
+theme = ExtResource("14_yo7n1")
+text = "Chinook Salmon"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
@@ -74,4 +77,6 @@ offset_right = 200.0
 offset_bottom = 373.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("14_yo7n1")
+text = "10 Tokens!"
 horizontal_alignment = 1
