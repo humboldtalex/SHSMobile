@@ -10,6 +10,8 @@ func _ready():
 	options_button.connect("pressed", on_options_pressed)
 	start_button.connect("pressed", on_start_pressed)
 	MenuThemeStream.play()
+	HomeThemeStream.stop()
+	FishingThemeStream.stop()
 
 func _process(delta):
 	pass
