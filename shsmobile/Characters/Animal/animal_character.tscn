@@ -33,6 +33,7 @@ scale = Vector2(6.48438, 2.14844)
 texture = SubResource("GradientTexture2D_xrx2v")
 
 [node name="ModelViewer" type="SubViewportContainer" parent="."]
+<<<<<<< Updated upstream
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -44,6 +45,12 @@ offset_right = 177.5
 offset_bottom = 252.5
 grow_horizontal = 2
 grow_vertical = 2
+=======
+offset_left = -48.0
+offset_top = -68.0
+offset_right = 49.0
+offset_bottom = 70.0
+>>>>>>> Stashed changes
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="ModelViewer"]

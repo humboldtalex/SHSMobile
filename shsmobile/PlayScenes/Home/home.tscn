@@ -1,5 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bncch0k3ko2tk"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" path="res://PlayScenes/Home/home.gd" id="1_ulxos"]
 [ext_resource type="Texture2D" uid="uid://no2ffjnwcrsh" path="res://PlayScenes/Home/HomeBackground.png" id="2_k1njd"]
 [ext_resource type="PackedScene" uid="uid://bgyqbh5cssr2s" path="res://Characters/Animal/animal_character.tscn" id="2_ulxos"]
@@ -14,3 +15,6 @@ texture = ExtResource("2_k1njd")
 
 [node name="AnimalCharacter" parent="." instance=ExtResource("2_ulxos")]
 position = Vector2(214, 622)
+=======
+[node name="Home" type="Node2D"]
+>>>>>>> Stashed changes
