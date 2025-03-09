@@ -1,15 +1,15 @@
 [gd_scene load_steps=9 format=3 uid="uid://265r15be0xv4"]
 
-[ext_resource type="Script" uid="uid://ddt366gsv48ti" path="res://PlayScenes/Home/Upgradeables/upgradeable.gd" id="1_ip5el"]
+[ext_resource type="Script" uid="uid://ddt366gsv48ti" path="res://PlayScenes/Home/Upgradeables/FoodBowl/food_bowl_area.gd" id="1_ip5el"]
 [ext_resource type="Texture2D" uid="uid://d1mtw5ogcg7ul" path="res://PlayScenes/Home/Upgradeables/FoodBowl/0.png" id="2_u5jt8"]
 [ext_resource type="Texture2D" uid="uid://gnia14qhblus" path="res://PlayScenes/Home/Upgradeables/FoodBowl/1.png" id="3_dopni"]
 [ext_resource type="Texture2D" uid="uid://df7whl2yavt4u" path="res://PlayScenes/Home/Upgradeables/FoodBowl/2.png" id="4_bltlb"]
 [ext_resource type="Texture2D" uid="uid://bty24h3jnbvh2" path="res://PlayScenes/Home/Upgradeables/FoodBowl/3.png" id="5_xg4iv"]
 [ext_resource type="Texture2D" uid="uid://5bt8c5ggbdu6" path="res://PlayScenes/Home/Upgradeables/FoodBowl/4.png" id="6_v3pwn"]
-[ext_resource type="Script" uid="uid://bnfnfk8e6p8j0" path="res://PlayScenes/Home/Upgradeables/FoodBowl/control.gd" id="7_bltlb"]
+[ext_resource type="Script" uid="uid://bnfnfk8e6p8j0" path="res://PlayScenes/Home/Upgradeables/FoodBowl/food_control.gd" id="7_bltlb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dtd4b"]
-radius = 116.349
+radius = 39.2173
 
 [node name="FoodBowl" type="Area2D"]
 script = ExtResource("1_ip5el")
@@ -20,6 +20,7 @@ texture = ExtResource("2_u5jt8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_dtd4b")
+one_way_collision_margin = 0.0
 
 [node name="Control" type="Control" parent="."]
 top_level = true

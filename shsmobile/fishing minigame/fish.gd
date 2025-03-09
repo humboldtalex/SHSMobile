@@ -11,7 +11,7 @@ var borderDistance := 20
 
 func _ready() -> void:
 	_set_target_position()
-	fish_sprite.play("move")
+	fish_sprite.play("bubbles")
 	
 func _set_target_position() -> void:
 	await get_tree().physics_frame

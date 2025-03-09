@@ -1,7 +1,68 @@
-[gd_scene load_steps=21 format=3 uid="uid://bhcw6o61k200w"]
+[gd_scene load_steps=37 format=3 uid="uid://bhcw6o61k200w"]
 
 [ext_resource type="Script" uid="uid://datt2usf4ehke" path="res://fishing minigame/fish.gd" id="1_y3k36"]
+[ext_resource type="Texture2D" uid="uid://bmdi3a534vxyg" path="res://fishing minigame/assets/bubbles.png" id="2_cfuqh"]
 [ext_resource type="Texture2D" uid="uid://druesetcvfyyx" path="res://fishing minigame/assets/Orange.png" id="2_wh5rm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnpc0"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 0, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7hso"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 480, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3phb"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 960, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4qbq"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 1440, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs6gr"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 1920, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vufb7"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 2400, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtlku"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 2880, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jso3u"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 3360, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4tid"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 3840, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdi3f"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 4320, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_engqc"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 4800, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqkho"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 5280, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfu0x"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 5760, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acc0i"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 6240, 480, 480)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2itlt"]
+atlas = ExtResource("2_cfuqh")
+region = Rect2(0, 6720, 480, 480)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ugbf"]
 atlas = ExtResource("2_wh5rm")
@@ -71,6 +132,56 @@ region = Rect2(112, 16, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_xnpc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7hso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3phb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4qbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs6gr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vufb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtlku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jso3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4tid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdi3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_engqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqkho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfu0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acc0i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2itlt")
+}],
+"loop": true,
+"name": &"bubbles",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_3ugbf")
 }, {
 "duration": 1.0,
@@ -124,15 +235,15 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n1jgf"]
-radius = 15.0
+radius = 30.0
 
 [node name="Fish" type="CharacterBody2D"]
 script = ExtResource("1_y3k36")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(2, 2)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_8nxng")
-animation = &"move"
+animation = &"bubbles"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_n1jgf")

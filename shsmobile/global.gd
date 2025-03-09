@@ -16,7 +16,7 @@ var fish_caught : Dictionary = {
 }
 var food_upgrade : int = 0
 var bed_upgrade : int = 0
-var tree_upgrade : int = 0
+var hydrant_upgrade : int = 0
 var all_time_tokens : int = 0
 
 func _input(event: InputEvent) -> void:
@@ -47,7 +47,7 @@ func get_vars_as_dict() -> Dictionary:
 		"fish_caught" : fish_caught,
 		"food_upgrade" : food_upgrade,
 		"bed_upgrade" : bed_upgrade,
-		"tree_upgrade" : tree_upgrade,
+		"hydrant_upgrade" : hydrant_upgrade,
 		"all_time_tokens" : all_time_tokens
 	}
 	return dict
@@ -63,7 +63,7 @@ func store_vars_from_dict(dict):
 			print("Loaded" + str(food_upgrade))
 		if dict.has("bed_upgrade"):
 			bed_upgrade = dict["bed_upgrade"]
-		if dict.has("tree_upgrade"):
-			tree_upgrade = dict["tree_upgrade"]
+		if dict.has("hydrant_upgrade"):
+			hydrant_upgrade = dict["hydrant_upgrade"]
 		if dict.has("all_time_tokens"):
 			all_time_tokens = dict["all_time_tokens"]

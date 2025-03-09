@@ -3,9 +3,6 @@ extends Control
 @onready var transition_screen: CanvasLayer = $"../../Transition Screen"
 @onready var button: Button = $Button
 
-
-
-
 func _ready():
 	button.connect("pressed", button_pressed)
 	

@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="Fish" load_steps=2 format=3 uid="uid://ks705vu0m8q0"]
+[gd_resource type="Resource" script_class="Fish" load_steps=3 format=3 uid="uid://ks705vu0m8q0"]
 
 [ext_resource type="Script" uid="uid://dq37t3tfea1ae" path="res://Fish Class/fish_resource.gd" id="1_l5fr2"]
+[ext_resource type="Texture2D" uid="uid://cn7a2qk7l3p48" path="res://Fish Class/FishTextures/green_sturgeon.png" id="1_lklpo"]
 
 [resource]
 script = ExtResource("1_l5fr2")
 fish_species = "Green Sturgeon"
-fish_price = 0
+fish_price = 9
+fish_sprite = ExtResource("1_lklpo")
 fish_rarity = 0.04
 metadata/_custom_type_script = "uid://dq37t3tfea1ae"

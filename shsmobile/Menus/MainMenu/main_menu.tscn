@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cuq01oegh3gne"]
 
 [ext_resource type="Script" uid="uid://bf77e8txtpo7j" path="res://Menus/MainMenu/main_menu.gd" id="1_3e31c"]
-[ext_resource type="Shader" uid="uid://cs8mecm5t8lsy" path="res://Menus/MainMenu/scrolling_background.gdshader" id="2_y4ryc"]
+[ext_resource type="Shader" path="res://Menus/MainMenu/scrolling_background.gdshader" id="2_y4ryc"]
 [ext_resource type="Texture2D" uid="uid://d4bvs7v8wlhyb" path="res://Menus/scrolling_pattern.png" id="3_7f67a"]
 [ext_resource type="FontFile" uid="uid://by7a8b53sxlvx" path="res://Textures/supermario85/SuperMario85.ttf" id="4_lkur8"]
 [ext_resource type="FontFile" uid="uid://cki15b6pc4s1m" path="res://Menus/Options/supermario85/SuperMario85.ttf" id="4_o0cfa"]

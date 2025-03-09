@@ -4,7 +4,7 @@ extends Control
 
 @onready var cancel_button: Button = $VBoxContainer/CancelButton
 @onready var pay_button: Button = $VBoxContainer/PayButton
-@onready var upgradeable: Upgradeable = $".."
+@onready var upgradeable: Area2D = $".."
 
 func _ready(): 
 	cancel_button.connect("pressed", on_cancel_pressed)
@@ -14,8 +14,8 @@ func on_cancel_pressed():
 	hide()
 
 func _process(delta: float) -> void:
-	if Global.food_upgrade < 4:
-		var cost = upgradeable.cost_array[Global.food_upgrade]
+	if Global.hydrant_upgrade < 4:
+		var cost = upgradeable.cost_array[Global.hydrant_upgrade]
 		if Global.tokens >= cost:
 			pay_button.text = "Upgrade your " + object_name + " for " + str(cost) + " tokens?"
 			pay_button.disabled = false
@@ -27,9 +27,9 @@ func _process(delta: float) -> void:
 		pay_button.disabled = true
 
 func on_pay_pressed():
-	if Global.tokens >= upgradeable.cost_array[Global.food_upgrade]:
-		Global.tokens -= upgradeable.cost_array[Global.food_upgrade]
-		Global.food_upgrade += 1
+	if Global.tokens >= upgradeable.cost_array[Global.hydrant_upgrade]:
+		Global.tokens -= upgradeable.cost_array[Global.hydrant_upgrade]
+		Global.hydrant_upgrade += 1
 		hide()
 	else:
 		print("Go getta job!")

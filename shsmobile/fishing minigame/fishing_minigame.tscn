@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://y6loya14qh2u"]
+[gd_scene load_steps=12 format=3 uid="uid://y6loya14qh2u"]
 
 [ext_resource type="Texture2D" uid="uid://fd0acs6wx1qw" path="res://fishing minigame/assets/Box_Orange_Square.png" id="1_grr4j"]
 [ext_resource type="Script" uid="uid://cayk0ijutmy6n" path="res://fishing minigame/fishing_game.gd" id="1_w2e65"]
+[ext_resource type="Shader" path="res://Menus/MainMenu/scrolling_background.gdshader" id="3_jauar"]
 [ext_resource type="PackedScene" uid="uid://bhcw6o61k200w" path="res://fishing minigame/fish.tscn" id="4_1qkt0"]
-[ext_resource type="PackedScene" uid="uid://rfsc4mepjwq5" path="res://Menus/Options/homebutton.tscn" id="5_s3bxt"]
+[ext_resource type="Texture2D" uid="uid://8c71qj23rra5" path="res://fishing minigame/assets/waterbackground.png" id="4_xjigb"]
+[ext_resource type="PackedScene" path="res://Menus/Options/homebutton.tscn" id="5_m7ou7"]
+[ext_resource type="PackedScene" uid="uid://bv73byg25sqmo" path="res://Transition/transition_screen.tscn" id="6_8fk87"]
 [ext_resource type="PackedScene" uid="uid://d3t8ptgatajj7" path="res://fishing minigame/target.tscn" id="6_vxgsl"]
-[ext_resource type="PackedScene" uid="uid://dki8woru12pka" path="res://Menus/Options/fish_tut.tscn" id="7_8fk87"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lm2d7"]
 texture = ExtResource("1_grr4j")
@@ -13,6 +15,15 @@ texture_margin_left = 40.0
 texture_margin_top = 40.0
 texture_margin_right = 40.0
 texture_margin_bottom = 40.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g4gxh"]
+shader = ExtResource("3_jauar")
+shader_parameter/scroll_speed = 0.04
+shader_parameter/angle_degrees = 0.0
+shader_parameter/repeat_x = 2.16
+shader_parameter/repeat_y = 4.8
+shader_parameter/row_offset = 0.0
+shader_parameter/texture_to_scroll = ExtResource("4_xjigb")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0puc6"]
 bg_color = Color(0.126741, 0.337691, 0.645827, 1)
@@ -67,31 +78,18 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="AquaContainer" type="PanelContainer" parent="FishingGame/PanelContainer/MarginContainer/VBoxContainer"]
+material = SubResource("ShaderMaterial_g4gxh")
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_0puc6")
 
 [node name="Fish" parent="FishingGame" node_paths=PackedStringArray("aquaContainer") instance=ExtResource("4_1qkt0")]
-position = Vector2(154, 161)
-scale = Vector2(4, 4)
+position = Vector2(527, 464)
 aquaContainer = NodePath("../PanelContainer/MarginContainer/VBoxContainer/AquaContainer")
 
 [node name="Target" parent="FishingGame" instance=ExtResource("6_vxgsl")]
-position = Vector2(540, 2200)
-scale = Vector2(2, 2)
 
-[node name="Control" parent="FishingGame" instance=ExtResource("5_s3bxt")]
-layout_mode = 1
+[node name="Control" parent="." instance=ExtResource("5_m7ou7")]
 
-[node name="Control2" parent="FishingGame" instance=ExtResource("7_8fk87")]
-layout_mode = 2
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 40.0
-offset_top = 40.0
-offset_right = 1040.0
-offset_bottom = 2360.0
-
-[connection signal="target_entered" from="FishingGame/Target" to="FishingGame" method="_on_target_target_entered"]
-[connection signal="target_exited" from="FishingGame/Target" to="FishingGame" method="_on_target_target_exited"]
+[node name="Transition Screen" parent="." instance=ExtResource("6_8fk87")]
+visible = false

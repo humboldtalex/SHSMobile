@@ -1,17 +1,16 @@
-class_name Upgradeable
 extends Area2D
 
 var stage : int = 4
 
-@onready var food_sprite: Sprite2D = $FoodSprite
+@onready var bed_sprite: Sprite2D = $BedSprite
 @onready var control: Control = $Control
 
 @export var sprite_array : Array[Texture2D] = []
 @export var cost_array : Array[int] = [
-	10,
-	20,
-	30,
-	40
+	12,
+	24,
+	36,
+	50
 ]
 
 func _input(event: InputEvent) -> void:
@@ -21,20 +20,20 @@ func _input(event: InputEvent) -> void:
 		downgrade()
 
 func _process(delta):
-	stage = Global.food_upgrade
-	food_sprite.texture = sprite_array[stage]
+	stage = Global.bed_upgrade
+	bed_sprite.texture = sprite_array[stage]
 	
 func upgrade():
 	if stage == 4:
 		print("too big")
 	else:
-		Global.food_upgrade += 1
+		Global.bed_upgrade += 1
 
 func downgrade():
 	if stage <= 0:
 		print("too small")
 	else:
-		Global.food_upgrade -= 1
+		Global.bed_upgrade -= 1
 
 # COLLISION DETECTION
 func _on_body_entered(body):

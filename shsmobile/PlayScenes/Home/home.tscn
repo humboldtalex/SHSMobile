@@ -1,19 +1,19 @@
 [gd_scene load_steps=10 format=3 uid="uid://b85mkal8054sq"]
 
-[ext_resource type="Script" uid="uid://dqyae5dnw7eu7" path="res://Menus/Options/home_tut.gd" id="1_af2yf"]
 [ext_resource type="Texture2D" uid="uid://ocvhgvwvt0qq" path="res://PlayScenes/Home/HomeBackground.png" id="1_fmrtn"]
+[ext_resource type="Script" uid="uid://4s0igih80kap" path="res://PlayScenes/Home/home.gd" id="1_xiept"]
 [ext_resource type="PackedScene" uid="uid://wkehnjdyhgna" path="res://Characters/Animal/animal_character.tscn" id="2_ulxos"]
 [ext_resource type="Texture2D" uid="uid://cnibs55wsfdnm" path="res://PlayScenes/Home/HomeTrees.png" id="3_k1njd"]
 [ext_resource type="PackedScene" uid="uid://bv73byg25sqmo" path="res://Transition/transition_screen.tscn" id="4_1va7s"]
+[ext_resource type="PackedScene" uid="uid://gk0njf3pbxmr" path="res://PlayScenes/Home/Upgradeables/Bed/Bed.tscn" id="4_xiept"]
+[ext_resource type="PackedScene" uid="uid://dhtw1r0e0lf7" path="res://PlayScenes/Home/Upgradeables/Hydrant/Hydrant.tscn" id="5_af2yf"]
 [ext_resource type="PackedScene" uid="uid://265r15be0xv4" path="res://PlayScenes/Home/Upgradeables/FoodBowl/FoodBowl.tscn" id="6_1ftow"]
-[ext_resource type="FontFile" uid="uid://by7a8b53sxlvx" path="res://Textures/supermario85/SuperMario85.ttf" id="7_af2yf"]
-[ext_resource type="PackedScene" uid="uid://ck1a2flydhjau" path="res://Menus/Options/Home_tut.tscn" id="8_af2yf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xiept"]
 font_size = 141
 
 [node name="Home" type="Node2D"]
-script = ExtResource("1_af2yf")
+script = ExtResource("1_xiept")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 1080.0
@@ -23,6 +23,12 @@ texture = ExtResource("1_fmrtn")
 
 [node name="FoodBowl" parent="." instance=ExtResource("6_1ftow")]
 position = Vector2(249, 1414)
+
+[node name="Bed" parent="." instance=ExtResource("4_xiept")]
+position = Vector2(224, 858)
+
+[node name="Hydrant" parent="." instance=ExtResource("5_af2yf")]
+position = Vector2(891, 2012)
 
 [node name="AnimalCharacter" parent="." instance=ExtResource("2_ulxos")]
 position = Vector2(540, 980)
@@ -44,13 +50,8 @@ offset_left = 59.0
 offset_top = 36.0
 offset_right = 662.0
 offset_bottom = 229.0
-theme_override_fonts/font = ExtResource("7_af2yf")
 text = "0 Tokens"
 label_settings = SubResource("LabelSettings_xiept")
-
-[node name="Control" parent="." instance=ExtResource("8_af2yf")]
-offset_right = 1080.0
-offset_bottom = 2400.0
 
 [editable path="AnimalCharacter"]
 [editable path="AnimalCharacter/SubViewportContainer/SubViewport/AnimalModel"]
