@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SHSMobile"
-run/main_scene="uid://cuq01oegh3gne"
+run/main_scene="uid://y6loya14qh2u"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
