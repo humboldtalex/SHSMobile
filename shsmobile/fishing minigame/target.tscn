@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bbubb2ug7e8eq" path="res://fishing minigame/assets/bobber.png" id="2_gfqbv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gfqbv"]
-radius = 50.0
+radius = 300.0
 
 [sub_resource type="Curve" id="Curve_gfqbv"]
 _data = [Vector2(0, 0.403737), 0.0, 1.67949, 0, 0, Vector2(0.458333, 0.723731), 0.27613, 0.27613, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -16,7 +16,7 @@ script = ExtResource("1_tturu")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_gfqbv")
-offset = Vector2(0, 150)
+offset = Vector2(0, 100)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 25)
@@ -24,7 +24,7 @@ shape = SubResource("CircleShape2D_gfqbv")
 
 [node name="FishLine" type="Line2D" parent="."]
 visible = false
-points = PackedVector2Array(0, 0, 0, 50)
+points = PackedVector2Array(0, 0, -25, 50)
 width = 4.0
 width_curve = SubResource("Curve_gfqbv")
 default_color = Color(0, 0, 0, 1)

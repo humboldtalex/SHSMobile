@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg4jy2d5vdrau"
-path="res://.godot/imported/sprite-sheets-water-bubble-ready-260nw-1215275353.webp-361c0c77ff2a6f18f4a6498a4df7b169.ctex"
+uid="uid://bogjdfn2xc6kq"
+path="res://.godot/imported/0.png-3161863ef6d717a8399abc302f93649f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/fishing_game/sprite-sheets-water-bubble-ready-260nw-1215275353.webp"
-dest_files=["res://.godot/imported/sprite-sheets-water-bubble-ready-260nw-1215275353.webp-361c0c77ff2a6f18f4a6498a4df7b169.ctex"]
+source_file="res://PlayScenes/Home/Upgradeables/Bed/0.png"
+dest_files=["res://.godot/imported/0.png-3161863ef6d717a8399abc302f93649f.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bycpsmtbsj0p6"
-path="res://.godot/imported/Orange.png-bf4c8673a45087012a26b0074afb682b.ctex"
+uid="uid://cj13yvc83jmsb"
+path="res://.godot/imported/2.png-de4a4b942fe7ee20f3ce951c0addb91f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/fishing_game/Orange.png"
-dest_files=["res://.godot/imported/Orange.png-bf4c8673a45087012a26b0074afb682b.ctex"]
+source_file="res://PlayScenes/Home/Upgradeables/Bed/2.png"
+dest_files=["res://.godot/imported/2.png-de4a4b942fe7ee20f3ce951c0addb91f.ctex"]
 
 [params]
 
