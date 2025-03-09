@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dgyjrqbhx8q0p"]
 
-[ext_resource type="Script" uid="uid://dqyae5dnw7eu7" path="res://Menus/home_tut_exit_button.gd" id="1_3g3hi"]
-[ext_resource type="FontFile" uid="uid://by7a8b53sxlvx" path="res://Textures/supermario85/SuperMario85.ttf" id="1_cmqep"]
+[ext_resource type="FontFile" uid="uid://by7a8b53sxlvx" path="res://Textures/supermario85/SuperMario85.ttf" id="1_vgsh5"]
+[ext_resource type="Script" uid="uid://dqyae5dnw7eu7" path="res://Menus/home_tut_exit_button.gd" id="2_m4myg"]
 
 [node name="Home_tut_panel" type="Control"]
 layout_mode = 3
@@ -21,7 +21,7 @@ offset_bottom = 0.799988
 
 [node name="Label" type="Label" parent="PanelContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_cmqep")
+theme_override_fonts/font = ExtResource("1_vgsh5")
 theme_override_font_sizes/font_size = 25
 text = "Welcome to our game!
 Here are some quick instructions so you can jump in!
@@ -32,4 +32,4 @@ Have fun :)"
 
 [node name="Button" type="Button" parent="PanelContainer"]
 layout_mode = 2
-script = ExtResource("1_3g3hi")
+script = ExtResource("2_m4myg")
