@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b85mkal8054sq"]
+[gd_scene load_steps=12 format=3 uid="uid://b85mkal8054sq"]
 
 [ext_resource type="Texture2D" uid="uid://ocvhgvwvt0qq" path="res://PlayScenes/Home/HomeBackground.png" id="1_fmrtn"]
 [ext_resource type="Script" uid="uid://4s0igih80kap" path="res://PlayScenes/Home/home.gd" id="1_xiept"]
@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://b6runb052p0vp" path="res://PlayScenes/Home/Upgradeables/Bed/Bed.tscn" id="4_xiept"]
 [ext_resource type="PackedScene" uid="uid://co28bkqqtuy5g" path="res://PlayScenes/Home/Upgradeables/Hydrant/Hydrant.tscn" id="5_af2yf"]
 [ext_resource type="PackedScene" uid="uid://265r15be0xv4" path="res://PlayScenes/Home/Upgradeables/FoodBowl/FoodBowl.tscn" id="6_1ftow"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_xiept"]
-font_size = 141
+[ext_resource type="Theme" uid="uid://tu1y2m1guvd3" path="res://Defaulttheme.tres" id="9_ppjkn"]
+[ext_resource type="Script" uid="uid://bgimvi5rxk2vj" path="res://PlayScenes/Home/control.gd" id="10_beyq6"]
+[ext_resource type="FontFile" uid="uid://by7a8b53sxlvx" path="res://Textures/supermario85/SuperMario85.ttf" id="11_80mx1"]
 
 [node name="Home" type="Node2D"]
 script = ExtResource("1_xiept")
@@ -33,9 +33,6 @@ position = Vector2(269, 1808)
 [node name="AnimalCharacter" parent="." instance=ExtResource("2_ulxos")]
 position = Vector2(540, 980)
 
-[node name="BoneAttachment3D" parent="AnimalCharacter/SubViewportContainer/SubViewport/AnimalModel/Armature/Skeleton3D" index="0"]
-transform = Transform3D(1, -7.10543e-15, 2.38419e-07, -7.10543e-15, 1, 5.96047e-08, -2.38419e-07, -5.96047e-08, 1, -3.03129e-15, 0.597473, -2.54283e-08)
-
 [node name="Trees" type="TextureRect" parent="."]
 offset_right = 1080.0
 offset_bottom = 2400.0
@@ -46,12 +43,38 @@ texture = ExtResource("3_k1njd")
 visible = false
 
 [node name="TokenLabel" type="Label" parent="."]
-offset_left = 59.0
-offset_top = 36.0
-offset_right = 662.0
-offset_bottom = 229.0
+offset_left = 752.0
+offset_top = 87.0
+offset_right = 1027.0
+offset_bottom = 151.0
+theme = ExtResource("9_ppjkn")
 text = "0 Tokens"
-label_settings = SubResource("LabelSettings_xiept")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 59.0
+offset_top = 63.0
+offset_right = 59.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_beyq6")
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.256
+anchor_bottom = 0.045
+offset_left = -14.0
+offset_top = 12.0
+offset_right = 369.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("11_80mx1")
+theme_override_font_sizes/font_size = 75
+text = "Main Menu"
 
 [editable path="AnimalCharacter"]
 [editable path="AnimalCharacter/SubViewportContainer/SubViewport/AnimalModel"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cuq01oegh3gne"]
+[gd_scene load_steps=9 format=3 uid="uid://cuq01oegh3gne"]
 
 [ext_resource type="Script" uid="uid://bf77e8txtpo7j" path="res://Menus/MainMenu/main_menu.gd" id="1_3e31c"]
 [ext_resource type="Shader" uid="uid://cs8mecm5t8lsy" path="res://Menus/MainMenu/scrolling_background.gdshader" id="2_y4ryc"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://by7a8b53sxlvx" path="res://Textures/supermario85/SuperMario85.ttf" id="4_lkur8"]
 [ext_resource type="FontFile" uid="uid://cki15b6pc4s1m" path="res://Menus/Options/supermario85/SuperMario85.ttf" id="4_o0cfa"]
 [ext_resource type="PackedScene" uid="uid://bv73byg25sqmo" path="res://Transition/transition_screen.tscn" id="4_y4ryc"]
+[ext_resource type="Texture2D" uid="uid://fdq57iy2m12s" path="res://Menus/Credits/Logo, transparent (1).png" id="7_o0cfa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lkur8"]
 shader = ExtResource("2_y4ryc")
@@ -42,20 +43,22 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -520.0
-offset_top = -201.0
+offset_top = -54.0
 offset_right = 520.0
-offset_bottom = 301.0
+offset_bottom = 634.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
+theme_override_constants/separation = 30
 
 [node name="Title" type="Label" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_lkur8")
 theme_override_font_sizes/font_size = 125
-text = "SHS Mobile Game"
+text = "Catfishing!"
+horizontal_alignment = 1
 
 [node name="StartButton" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
@@ -69,19 +72,36 @@ theme_override_fonts/font = ExtResource("4_lkur8")
 theme_override_font_sizes/font_size = 75
 text = "Options"
 
+[node name="CharacterCustomization" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_lkur8")
+theme_override_font_sizes/font_size = 75
+text = "Customize Character"
+
 [node name="CreditsButton" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_lkur8")
 theme_override_font_sizes/font_size = 75
 text = "Credits"
 
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
 [node name="LinkButton" type="LinkButton" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_o0cfa")
 theme_override_font_sizes/font_size = 75
-text = "                 Donate"
+text = "   Donate and Learn More!"
 underline = 2
 uri = "https://www.sequoiahumane.org/donateSHS.htm"
 
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
 [node name="Transition Screen" parent="." instance=ExtResource("4_y4ryc")]
 visible = false
+
+[node name="Logo,Transparent(1)" type="Sprite2D" parent="."]
+position = Vector2(543, 698)
+scale = Vector2(0.554667, 0.554667)
+texture = ExtResource("7_o0cfa")

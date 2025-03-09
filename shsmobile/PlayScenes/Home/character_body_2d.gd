@@ -6,9 +6,24 @@ extends CharacterBody2D
 
 @onready var animation_player: AnimationPlayer = $SubViewportContainer/SubViewport/AnimalModel/AnimationPlayer
 @onready var animal_model: Node3D = $SubViewportContainer/SubViewport/AnimalModel
+@onready var dog_ears: MeshInstance3D = $SubViewportContainer/SubViewport/AnimalModel/Armature/Skeleton3D/BoneAttachment3D/DogEars
+@onready var cat_ears: MeshInstance3D = $SubViewportContainer/SubViewport/AnimalModel/Armature/Skeleton3D/BoneAttachment3D/CatEars
+@onready var cube: MeshInstance3D = $SubViewportContainer/SubViewport/AnimalModel/Armature/Skeleton3D/Cube
 
+const ANIMAL_BASE = preload("res://Characters/Animal/Textures/animal_base.tres")
 var click_position = Vector2(540, 980)
 var target_position = Vector2()
+
+func _ready():
+	if Global.cat_or_dog:
+		cat_ears.hide()
+		dog_ears.show()
+	else:
+		cat_ears.show()
+		dog_ears.hide()
+	cat_ears.material_override.albedo_color = Global.sec_color
+	dog_ears.material_override.albedo_color = Global.sec_color
+	cube.get_surface_override_material(0).albedo_color = Global.prim_color
 
 func _physics_process(delta):
 	if Input.is_action_pressed("click"):

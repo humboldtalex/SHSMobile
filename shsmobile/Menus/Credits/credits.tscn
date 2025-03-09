@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://5ygvvibw201k"]
+[gd_scene load_steps=7 format=3 uid="uid://5ygvvibw201k"]
 
 [ext_resource type="Script" uid="uid://bo51ix1m18snd" path="res://Menus/Credits/credits.gd" id="1_a0wjq"]
 [ext_resource type="Shader" uid="uid://cs8mecm5t8lsy" path="res://Menus/MainMenu/scrolling_background.gdshader" id="2_5cf2t"]
 [ext_resource type="PackedScene" uid="uid://bv73byg25sqmo" path="res://Transition/transition_screen.tscn" id="2_mosgp"]
 [ext_resource type="Texture2D" uid="uid://d4bvs7v8wlhyb" path="res://Menus/scrolling_pattern.png" id="3_b6xq5"]
 [ext_resource type="FontFile" uid="uid://by7a8b53sxlvx" path="res://Textures/supermario85/SuperMario85.ttf" id="4_b6xq5"]
-[ext_resource type="Texture2D" uid="uid://c4v1ab17m6egy" path="res://Menus/Credits/LOGO SQUARE.png" id="5_fx4nd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fx4nd"]
 shader = ExtResource("2_5cf2t")
@@ -55,7 +54,15 @@ layout_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_b6xq5")
 theme_override_font_sizes/font_size = 100
-text = "Roshan Namgostar
+text = "This game
+was made in 24
+hours for the
+Sequoia
+Humane Society.
+Please donate
+on the main page!
+
+Roshan Namgostar
 Landon Sacrey
 Alex Coney
 David Hungerman
@@ -70,11 +77,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("4_b6xq5")
 theme_override_font_sizes/font_size = 100
 text = "Back"
-
-[node name="LogoSquare" type="Sprite2D" parent="PanelContainer/VBoxContainer"]
-position = Vector2(466, -273)
-scale = Vector2(0.85, 0.896)
-texture = ExtResource("5_fx4nd")
 
 [node name="Transition Screen" parent="." instance=ExtResource("2_mosgp")]
 visible = false

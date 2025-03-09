@@ -18,6 +18,9 @@ var food_upgrade : int = 0
 var bed_upgrade : int = 0
 var hydrant_upgrade : int = 0
 var all_time_tokens : int = 0
+var prim_color : Color = Color("a48668")
+var sec_color : Color = Color("d9d1cb")
+var cat_or_dog : bool = false
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_left"):
@@ -48,7 +51,10 @@ func get_vars_as_dict() -> Dictionary:
 		"food_upgrade" : food_upgrade,
 		"bed_upgrade" : bed_upgrade,
 		"hydrant_upgrade" : hydrant_upgrade,
-		"all_time_tokens" : all_time_tokens
+		"all_time_tokens" : all_time_tokens,
+		"prim_color" : prim_color,
+		"sec_color" : sec_color,
+		"cat_or_dog" : cat_or_dog
 	}
 	return dict
 
@@ -67,3 +73,9 @@ func store_vars_from_dict(dict):
 			hydrant_upgrade = dict["hydrant_upgrade"]
 		if dict.has("all_time_tokens"):
 			all_time_tokens = dict["all_time_tokens"]
+		if dict.has("prim_color"):
+			prim_color = dict["prim_color"]
+		if dict.has("sec_color"):
+			sec_color = dict["sec_color"]
+		if dict.has("cat_or_dog"):
+			cat_or_dog = dict["cat_or_dog"]

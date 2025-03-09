@@ -12,4 +12,4 @@ func _ready():
 func _process(delta):
 	if animal_character.global_position.y > 2000:
 		transition_screen.transition_to_scene("res://fishing minigame/fishing_minigame.tscn")
-	token_label.text = str(Global.tokens) + " tokens!"
+	token_label.text = str(Global.tokens) + " tokens"

@@ -1,0 +1,108 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfp5i3f1vsidc"]
+
+[ext_resource type="Script" uid="uid://b02htiyx2hg1" path="res://Menus/CharacterCustomization/character_customization.gd" id="1_f6i3u"]
+[ext_resource type="Shader" uid="uid://cs8mecm5t8lsy" path="res://Menus/MainMenu/scrolling_background.gdshader" id="2_0snrr"]
+[ext_resource type="Texture2D" uid="uid://d4bvs7v8wlhyb" path="res://Menus/scrolling_pattern.png" id="3_14x88"]
+[ext_resource type="FontFile" uid="uid://by7a8b53sxlvx" path="res://Textures/supermario85/SuperMario85.ttf" id="4_p1elj"]
+[ext_resource type="PackedScene" uid="uid://bv73byg25sqmo" path="res://Transition/transition_screen.tscn" id="5_j8hqj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fx4nd"]
+shader = ExtResource("2_0snrr")
+shader_parameter/scroll_speed = 0.04
+shader_parameter/angle_degrees = 315.0
+shader_parameter/repeat_x = 5.0
+shader_parameter/repeat_y = 10.0
+shader_parameter/row_offset = 1.0
+shader_parameter/texture_to_scroll = ExtResource("3_14x88")
+
+[node name="CharacterCustomization" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f6i3u")
+
+[node name="ScrollingBackground" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_fx4nd")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -472.0
+offset_top = -415.0
+offset_right = 472.0
+offset_bottom = 415.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+custom_minimum_size = Vector2(809.06, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_p1elj")
+theme_override_font_sizes/font_size = 100
+text = "Customize"
+horizontal_alignment = 1
+
+[node name="PrimColor" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/PrimColor"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_p1elj")
+theme_override_font_sizes/font_size = 100
+text = "1st Color"
+horizontal_alignment = 1
+
+[node name="Primary" type="ColorPickerButton" parent="PanelContainer/VBoxContainer/PrimColor"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.644579, 0.523937, 0.408351, 1)
+
+[node name="SecColor" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/SecColor"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_p1elj")
+theme_override_font_sizes/font_size = 100
+text = "2nd Color"
+horizontal_alignment = 1
+
+[node name="Secondary" type="ColorPickerButton" parent="PanelContainer/VBoxContainer/SecColor"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.850984, 0.820553, 0.794364, 1)
+
+[node name="Cat (Toggle)" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_p1elj")
+theme_override_font_sizes/font_size = 100
+text = "Cat (Toggle)
+"
+
+[node name="BackButton" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_p1elj")
+theme_override_font_sizes/font_size = 100
+text = "Back"
+
+[node name="Transition Screen" parent="." instance=ExtResource("5_j8hqj")]
+visible = false
